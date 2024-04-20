@@ -18,5 +18,13 @@ namespace Projet_TransConnect_TANG
             this.commandes_client.Append(commande);
             this.mantant_accumule = this.mantant_accumule + commande.Prix;
         }
+        public List<Commande> Commandes_client
+        {
+            get { return commandes_client;}
+        }
+        public double Mantant_accumule
+        {
+            get { return mantant_accumule; }
+        }
     }
 }
