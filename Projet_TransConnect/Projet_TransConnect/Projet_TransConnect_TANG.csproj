@@ -49,20 +49,27 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Distances.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Camionnette.cs" />
+    <Compile Include="Dijkstra\Dijkstra.cs" />
+    <Compile Include="Dijkstra\EData.cs" />
+    <Compile Include="Dijkstra\ENode.cs" />
+    <Compile Include="Dijkstra\VNode.cs" />
+    <Compile Include="Multitree.cs" />
+    <Compile Include="Véhicule\Camionnette.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Commande.cs" />
     <Compile Include="Entreprise.cs" />
-    <Compile Include="Multitree.cs" />
+    <Compile Include="Graph.cs" />
     <Compile Include="Noeud.cs" />
     <Compile Include="Personne.cs" />
-    <Compile Include="PoidsLourds.cs" />
+    <Compile Include="Véhicule\Camion.cs" />
     <Compile Include="Programme.cs" />
     <Compile Include="Salarie.cs" />
-    <Compile Include="Vehicule.cs" />
-    <Compile Include="Voiture.cs" />
+    <Compile Include="test.cs" />
+    <Compile Include="Véhicule\Vehicule.cs" />
+    <Compile Include="Véhicule\Voiture.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

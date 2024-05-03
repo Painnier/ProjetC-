@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projet_TransConnect
+namespace Projet_TransConnect_TANG
 {
-    internal class Camionnette
+    public class Graph
     {
+
     }
 }
