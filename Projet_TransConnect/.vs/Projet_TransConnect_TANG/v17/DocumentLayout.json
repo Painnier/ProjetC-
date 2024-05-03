@@ -3,48 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|c:\\users\\tang\\source\\repos\\painnier\\projetc-\\projet_transconnect\\projet_transconnect\\programme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\programme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|c:\\users\\tang\\source\\repos\\painnier\\projetc-\\projet_transconnect\\projet_transconnect\\csvhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\csvhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\projet_transconnect\\noeud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\noeud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\projet_transconnect\\commande.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\commande.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|c:\\users\\tang\\source\\repos\\painnier\\projetc-\\projet_transconnect\\projet_transconnect\\dijkstra\\dijkstra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\dijkstra\\dijkstra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|c:\\users\\tang\\source\\repos\\painnier\\projetc-\\projet_transconnect\\projet_transconnect\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|c:\\users\\tang\\source\\repos\\painnier\\projetc-\\projet_transconnect\\projet_transconnect\\dijkstra\\edata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\dijkstra\\edata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|c:\\users\\tang\\source\\repos\\painnier\\projetc-\\projet_transconnect\\projet_transconnect\\dijkstra\\vnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\dijkstra\\vnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|c:\\users\\tang\\source\\repos\\painnier\\projetc-\\projet_transconnect\\projet_transconnect\\dijkstra\\enode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\dijkstra\\enode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\projet_transconnect\\entreprise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\entreprise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\projet_transconnect\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\projet_transconnect\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|c:\\users\\tang\\source\\repos\\painnier\\projetc-\\projet_transconnect\\projet_transconnect\\multitree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}|Projet_TransConnect\\Projet_TransConnect_TANG.csproj|solutionrelative:projet_transconnect\\multitree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -69,146 +33,37 @@
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Programme.cs",
-              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Programme.cs",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\Programme.cs",
-              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Programme.cs",
-              "RelativeToolTip": "Projet_TransConnect\\Programme.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAsAAAA",
+              "Title": "CSVHelper.cs",
+              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\CSVHelper.cs",
+              "RelativeDocumentMoniker": "Projet_TransConnect\\CSVHelper.cs",
+              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\CSVHelper.cs",
+              "RelativeToolTip": "Projet_TransConnect\\CSVHelper.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAwwCMAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T21:18:42.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "test.cs",
-              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\test.cs",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\test.cs",
-              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\test.cs",
-              "RelativeToolTip": "Projet_TransConnect\\test.cs",
-              "ViewState": "AQIAALgAAAAAAAAAAAAYwM8AAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T21:38:02.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Dijkstra.cs",
-              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Dijkstra\\Dijkstra.cs",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\Dijkstra\\Dijkstra.cs",
-              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Dijkstra\\Dijkstra.cs",
-              "RelativeToolTip": "Projet_TransConnect\\Dijkstra\\Dijkstra.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T21:17:22.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EData.cs",
-              "DocumentMoniker": "C:\\Users\\TANG\\Source\\Repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Dijkstra\\EData.cs",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\Dijkstra\\EData.cs",
-              "ToolTip": "C:\\Users\\TANG\\Source\\Repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Dijkstra\\EData.cs",
-              "RelativeToolTip": "Projet_TransConnect\\Dijkstra\\EData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T21:15:27.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "VNode.cs",
-              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Dijkstra\\VNode.cs",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\Dijkstra\\VNode.cs",
-              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Dijkstra\\VNode.cs",
-              "RelativeToolTip": "Projet_TransConnect\\Dijkstra\\VNode.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T21:14:52.765Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ENode.cs",
-              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Dijkstra\\ENode.cs",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\Dijkstra\\ENode.cs",
-              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Dijkstra\\ENode.cs",
-              "RelativeToolTip": "Projet_TransConnect\\Dijkstra\\ENode.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T21:14:16.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Entreprise.cs",
-              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Entreprise.cs",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\Entreprise.cs",
-              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Entreprise.cs",
-              "RelativeToolTip": "Projet_TransConnect\\Entreprise.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T16:02:10.088Z",
+              "WhenOpened": "2024-05-03T20:13:53.674Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Noeud.cs",
-              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Noeud.cs",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\Noeud.cs",
-              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Noeud.cs",
-              "RelativeToolTip": "Projet_TransConnect\\Noeud.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Multitree.cs",
+              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Multitree.cs",
+              "RelativeDocumentMoniker": "Projet_TransConnect\\Multitree.cs",
+              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Multitree.cs",
+              "RelativeToolTip": "Projet_TransConnect\\Multitree.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowDMAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T16:02:04.979Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Graph.cs",
-              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Graph.cs",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\Graph.cs",
-              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Graph.cs",
-              "RelativeToolTip": "Projet_TransConnect\\Graph.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T16:01:02.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Commande.cs",
-              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Commande.cs",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\Commande.cs",
-              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Commande.cs",
-              "RelativeToolTip": "Projet_TransConnect\\Commande.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwDgAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T19:22:03.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Client.cs",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\Client.cs",
-              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Client.cs",
-              "RelativeToolTip": "Projet_TransConnect\\Client.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T19:18:51.097Z",
+              "WhenOpened": "2024-05-03T20:12:16.368Z",
               "EditorCaption": ""
             }
           ]

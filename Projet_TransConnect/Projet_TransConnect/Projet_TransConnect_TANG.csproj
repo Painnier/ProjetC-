@@ -52,6 +52,7 @@
     <None Include="Distances.xlsx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSVHelper.cs" />
     <Compile Include="Dijkstra\Dijkstra.cs" />
     <Compile Include="Dijkstra\EData.cs" />
     <Compile Include="Dijkstra\ENode.cs" />
