@@ -1,2 +1,0 @@
-G:\C#\Projet_TransConnect\Projet_TransConnect\obj\Debug\Projet_TransConnect.csproj.AssemblyReference.cache
-G:\C#\Projet_TransConnect\Projet_TransConnect\obj\Debug\Projet_TransConnect.csproj.CoreCompileInputs.cache

@@ -6,12 +6,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{463C694F-B7F8-44DB-AA51-5CCE6C04DA8E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Projet_TransConnect</RootNamespace>
-    <AssemblyName>Projet_TransConnect</AssemblyName>
+    <RootNamespace>Projet_TransConnect_TANG</RootNamespace>
+    <AssemblyName>Projet_TransConnect_TANG</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -49,31 +49,40 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Distances.xlsx" />
+    <None Include="Distances.csv" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CSVHelper.cs" />
     <Compile Include="Dijkstra\Dijkstra.cs" />
     <Compile Include="Dijkstra\EData.cs" />
     <Compile Include="Dijkstra\ENode.cs" />
     <Compile Include="Dijkstra\VNode.cs" />
-    <Compile Include="Multitree.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ConvertHelper.cs" />
+    <Compile Include="Helpers\CSVHelper.cs" />
+    <Compile Include="Interfaces\IConvertPrix.cs" />
+    <Compile Include="Programme.cs" />
     <Compile Include="Véhicule\Camionnette.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Commande.cs" />
     <Compile Include="Entreprise.cs" />
-    <Compile Include="Graph.cs" />
     <Compile Include="Noeud.cs" />
     <Compile Include="Personne.cs" />
     <Compile Include="Véhicule\Camion.cs" />
-    <Compile Include="Programme.cs" />
     <Compile Include="Salarie.cs" />
-    <Compile Include="test.cs" />
     <Compile Include="Véhicule\Vehicule.cs" />
     <Compile Include="Véhicule\Voiture.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -86,6 +95,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Projet_TransConnect_TANG
 {
-    /**
-    * Dijkstra算法获取最短路径
-*/
     public class Dijkstra
     {
         public static int MAX = int.MaxValue;
+        public String[] vexss;
         public int mEdgNum;    // 边的数量
         public VNode[] mVexs;  // 顶点数组
 
@@ -22,9 +20,9 @@ namespace Projet_TransConnect_TANG
          *     vexs  -- 顶点数组
          *     edges -- 边
          */
-        public Dijkstra(char[] vexs, EData[] edges)
+        public Dijkstra(String[] vexs, EData[] edges)
         {
-
+            this.vexss = vexs;
             // 初始化"顶点数"和"边数"
             int vlen = vexs.Length;
             int elen = edges.Length;
@@ -43,8 +41,8 @@ namespace Projet_TransConnect_TANG
             for (int i = 0; i < elen; i++)
             {
                 // 读取边的起始顶点和结束顶点
-                char c1 = edges[i].start;
-                char c2 = edges[i].end;
+                String c1 = edges[i].start;
+                String c2 = edges[i].end;
                 int weight = edges[i].weight;
 
                 // 读取边的起始顶点和结束顶点
@@ -86,46 +84,30 @@ namespace Projet_TransConnect_TANG
         /*
          * 返回ch位置
          */
-        private int GetPosition(char ch)
+        private int GetPosition(String ch)
         {
             for (int i = 0; i < mVexs.Length; i++)
                 if (mVexs[i].data == ch)
                     return i;
             return -1;
         }
-
         /*
-         * 获取边<start, end>的权值；若start和end不是连通的，则返回无穷大。
-         */
-        private int GetWeight(int start, int end)
-        {
-            if (start == end)
-                return 0;
-
-            ENode node = mVexs[start].firstEdge;
-            while (node != null)
-            {
-                if (end == node.ivex)
-                    return node.weight;
-                node = node.nextEdge;
-            }
-
-            return MAX;
-        }
-
-        /*
-         * Dijkstra最短路径。
-         * 即，统计图中"起点D"到其它各个顶点的最短路径。
-         *
-         * 参数说明：
-         *       vs -- 起始顶点(start vertex)。
-         *     prev -- 前驱顶点数组。即，prev[i]的值是"起点D"到"顶点i"的最短路径所经历的全部顶点中，位于"顶点i"之前的那个顶点。
-         *     dist -- 长度数组。即，dist[i]是"起点D"到"顶点i"的最短路径的长度。
-         */
-        public void CalcDijkstra(int vs, int[] prev, int[] dist)
+        * Dijkstra最短路径。
+        * 即，统计图中"起点D"到其它各个顶点的最短路径。
+        *
+        * 参数说明：
+        *       vs -- 起始顶点(start vertex)。
+        *     prev -- 前驱顶点数组。即，prev[i]的值是"起点D"到"顶点i"的最短路径所经历的全部顶点中，位于"顶点i"之前的那个顶点。
+        *     dist -- 长度数组。即，dist[i]是"起点D"到"顶点i"的最短路径的长度。
+        */
+        public int CalcDijkstra(String start, String end)
         {
             // flag[i]=true表示"起点D"到"顶点i"的最短路径已成功获取。
             bool[] flag = new bool[mVexs.Length];
+            int vs = Array.IndexOf(this.vexss, start);
+            int[] dist = new int[this.mVexs.Length];
+            int[] prev = new int[this.mVexs.Length];
+
 
             // 初始化
             for (int i = 0; i < mVexs.Length; i++)
@@ -170,13 +152,25 @@ namespace Projet_TransConnect_TANG
                     }
                 }
             }
+            return dist[Array.IndexOf(this.vexss, end)];
+        }
 
-            // 打印dijkstra最短路径的结果
-            Console.WriteLine("dijkstra({0}): \n", mVexs[vs].data);
-            for (int i = 0; i < mVexs.Length; i++)
+        /*
+         * 获取边<start, end>的权值；若start和end不是连通的，则返回无穷大。
+         */
+        private int GetWeight(int start, int end)
+        {
+            if (start == end)
+                return 0;
+
+            ENode node = mVexs[start].firstEdge;
+            while (node != null)
             {
-                Console.WriteLine("shortest({0}, {1})={2}\n", mVexs[vs].data, mVexs[i].data, dist[i]);
+                if (end == node.ivex)
+                    return node.weight;
+                node = node.nextEdge;
             }
+            return MAX;
         }
     }
 }

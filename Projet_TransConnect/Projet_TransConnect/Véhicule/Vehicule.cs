@@ -9,14 +9,22 @@ namespace Projet_TransConnect_TANG
     public abstract class Vehicule
     {
         protected int immat;
-        public Vehicule(int immat)
+        protected double prixloue;
+        public Vehicule(int immat,double prixloue)
         {
-            immat = 0;
+            this.immat = immat;
+            this.prixloue = prixloue;
         }
         public int Immat
         {
             get { return immat; }
         }
+        public double PrixLoue
+        {
+            get { return prixloue; }
+            set { prixloue = value; }
+        }
+
         public override string ToString()
         {
             return immat.ToString();

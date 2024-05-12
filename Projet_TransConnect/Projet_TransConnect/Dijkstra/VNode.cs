@@ -8,7 +8,7 @@ namespace Projet_TransConnect_TANG
 {
     public class VNode
     {
-        public char data;          // 顶点信息
+        public String data;          // 顶点信息
         public ENode firstEdge;    // 指向第一条依附该顶点的弧
     }
 }

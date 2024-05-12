@@ -1,2 +1,0 @@
-C:\Users\TANG\source\repos\Painnier\ProjetC-\Projet_TransConnect\Projet_TransConnect\obj\Debug\Projet_TransConnect_TANG.csproj.AssemblyReference.cache
-C:\Users\TANG\source\repos\Painnier\ProjetC-\Projet_TransConnect\Projet_TransConnect\obj\Debug\Projet_TransConnect_TANG.csproj.CoreCompileInputs.cache

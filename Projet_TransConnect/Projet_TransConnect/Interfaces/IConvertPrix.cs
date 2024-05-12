@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Projet_TransConnect_TANG
 {
-    public class Graph
+    public interface IConvertPrix
     {
-
+        double ConvertKmsToPrix();
     }
 }
