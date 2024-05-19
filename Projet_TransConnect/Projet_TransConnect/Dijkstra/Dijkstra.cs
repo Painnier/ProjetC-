@@ -12,6 +12,8 @@ namespace Projet_TransConnect_TANG
         public String[] vexss;
         public int mEdgNum;    // 边的数量
         public VNode[] mVexs;  // 顶点数组
+        int distance;
+
 
         /*
          * 创建图
@@ -22,6 +24,7 @@ namespace Projet_TransConnect_TANG
          */
         public Dijkstra(String[] vexs, EData[] edges)
         {
+            this.distance = 0;
             this.vexss = vexs;
             // 初始化"顶点数"和"边数"
             int vlen = vexs.Length;
@@ -68,6 +71,10 @@ namespace Projet_TransConnect_TANG
                     LinkLast(mVexs[p2].firstEdge, node2);
             }
         }
+        public int Distance
+        {
+            get { return distance; }
+        }
 
         /*
          * 将node节点链接到list的最后
@@ -100,20 +107,19 @@ namespace Projet_TransConnect_TANG
         *     prev -- 前驱顶点数组。即，prev[i]的值是"起点D"到"顶点i"的最短路径所经历的全部顶点中，位于"顶点i"之前的那个顶点。
         *     dist -- 长度数组。即，dist[i]是"起点D"到"顶点i"的最短路径的长度。
         */
-        public int CalcDijkstra(String start, String end)
+        public int[] CalcDijkstra(String start, String end)
         {
             // flag[i]=true表示"起点D"到"顶点i"的最短路径已成功获取。
             bool[] flag = new bool[mVexs.Length];
             int vs = Array.IndexOf(this.vexss, start);
             int[] dist = new int[this.mVexs.Length];
-            int[] prev = new int[this.mVexs.Length];
-
+            int[] chemin = new int[this.mVexs.Length];
 
             // 初始化
             for (int i = 0; i < mVexs.Length; i++)
             {
                 flag[i] = false;            // 顶点i的最短路径还没获取到。
-                prev[i] = 0;                // 顶点i的前驱顶点为0。
+                chemin[i] = 0;                // 顶点i的前驱顶点为0。
                 dist[i] = GetWeight(vs, i); // 顶点i的最短路径为"起点D"到"顶点i"的权。
             }
 
@@ -133,7 +139,7 @@ namespace Projet_TransConnect_TANG
                     if (flag[j] == false && dist[j] < min)
                     {
                         min = dist[j];
-                        k = j;
+                        k = j;//找到当前最短的路线
                     }
                 }
                 // 标记"顶点k"为已经获取到最短路径
@@ -143,16 +149,18 @@ namespace Projet_TransConnect_TANG
                 // 即，更新"未获取最短路径的顶点的最短路径和前驱顶点"。
                 for (int j = 0; j < mVexs.Length; j++)
                 {
-                    int tmp = GetWeight(k, j);
+                    int tmp = GetWeight(k, j);//找到当前最短的路线与其他路线的距离
                     tmp = (tmp == MAX ? MAX : (min + tmp)); // 防止溢出
                     if (flag[j] == false && (tmp < dist[j]))
                     {
                         dist[j] = tmp;
-                        prev[j] = k;
+                        chemin[j] = k;
                     }
                 }
             }
-            return dist[Array.IndexOf(this.vexss, end)];
+            
+            this.distance = dist[Array.IndexOf(this.vexss, end)];
+            return chemin;
         }
 
         /*

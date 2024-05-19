@@ -52,28 +52,50 @@
     <None Include="Distances.csv" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chauffeur.cs" />
     <Compile Include="Dijkstra\Dijkstra.cs" />
     <Compile Include="Dijkstra\EData.cs" />
     <Compile Include="Dijkstra\ENode.cs" />
     <Compile Include="Dijkstra\VNode.cs" />
-    <Compile Include="Menu.cs">
+    <Compile Include="Pages\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="Pages\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Oraganigramme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Oraganigramme.Designer.cs">
+      <DependentUpon>Oraganigramme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TestUnitaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\TestUnitaire.Designer.cs">
+      <DependentUpon>TestUnitaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ICloneable.cs" />
+    <Compile Include="Interfaces\IMoyenne.cs" />
     <Compile Include="Helpers\ConvertHelper.cs" />
     <Compile Include="Helpers\CSVHelper.cs" />
     <Compile Include="Interfaces\IConvertPrix.cs" />
+    <Compile Include="Multitree.cs" />
     <Compile Include="Programme.cs" />
     <Compile Include="Véhicule\Camionnette.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Commande.cs" />
     <Compile Include="Entreprise.cs" />
-    <Compile Include="Noeud.cs" />
+    <Compile Include="MTreeNode.cs" />
     <Compile Include="Personne.cs" />
     <Compile Include="Véhicule\Camion.cs" />
-    <Compile Include="Salarie.cs" />
+    <Compile Include="Salairie.cs" />
     <Compile Include="Véhicule\Vehicule.cs" />
     <Compile Include="Véhicule\Voiture.cs" />
   </ItemGroup>
@@ -97,8 +119,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Pages\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Oraganigramme.resx">
+      <DependentUpon>Oraganigramme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\TestUnitaire.resx">
+      <DependentUpon>TestUnitaire.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

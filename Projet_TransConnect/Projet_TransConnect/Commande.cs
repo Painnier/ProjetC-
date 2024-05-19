@@ -19,9 +19,9 @@ namespace Projet_TransConnect_TANG
         Client client;
         string start, end;
         double prix;
-        Salarie chauffeur;
+        Salairie chauffeur;
         Vehicule vehicule;
-        int KmParcouru=0;
+        int KmParcouru = 0;
         int TempsMinKmParcouru = 0;
 
         DateTime createdate, finaldate; 
@@ -29,7 +29,7 @@ namespace Projet_TransConnect_TANG
         double PayByKms = 5.0;
         double PayByTimes = 0.3;
 
-        public Commande(Client client, Salarie chauffeur, Vehicule vehicule, string start, String end, List<string[]> Distances)
+        public Commande(Client client, Salairie chauffeur, Vehicule vehicule, string start, String end, List<string[]> Distances)
         {
             this.createdate = DateTime.Now;
             this.client = client;
@@ -45,6 +45,7 @@ namespace Projet_TransConnect_TANG
             String[] vexss = ConvertHelper.Villes(Starts, Ends);
             EData[] edgess = new EData[Starts.Length];
         }
+        #region Property
         public double Prix
         {
             get { return prix; }
@@ -62,7 +63,7 @@ namespace Projet_TransConnect_TANG
         { 
             get { return client; } 
         }
-        public Salarie Chauffeur
+        public Salairie Chauffeur
         {
             get { return chauffeur; }
             set { chauffeur = value; }
@@ -72,9 +73,16 @@ namespace Projet_TransConnect_TANG
             get { return vehicule; }
             set { vehicule = value; }
         }
+        #endregion
         public override string ToString()
         {
             return "Client : " + client.ToString() + ", prix : " + prix.ToString() + ", chauffeur : [" + chauffeur.ToString() + "], create date : " + createdate.ToString() + ", véhicule : " + vehicule + ", trafic : " +  start + " to " + end;
+        }
+        public void Effectuee()
+        {
+            PrixFinal();
+            this.finaldate = DateTime.Now;
+            client.Accumuler();
         }
         private void PrixKms()
         {
@@ -83,14 +91,9 @@ namespace Projet_TransConnect_TANG
                 edgess[i] = new EData(Starts[i], Ends[i], Kms[i]);
             }
             Dijkstra Dij = new Dijkstra(vexss, edgess);
-            this.prix = Convert.ToDouble(Dij.CalcDijkstra(start, end))*PayByTimes;
-            this.KmParcouru = Dij.CalcDijkstra(start, end);
-        }
-        public void Effectuee()
-        {
-            PrixFinal();
-            this.finaldate = DateTime.Now;
-            client.Accumuler();
+            Dij.CalcDijkstra(start, end);
+            this.prix = Convert.ToDouble(Dij.Distance) * PayByKms;
+            this.KmParcouru = Dij.Distance;
         }
     }
 }

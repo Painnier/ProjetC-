@@ -9,110 +9,152 @@ namespace Projet_TransConnect_TANG
 {
     public class Multitree
     {
-        private Stack<Noeud> t_stack;
-        private Queue<Noeud> queue_t = new Queue<Noeud>();
+        MTreeNode head;
 
-        private static Noeud search_node_r(Salarie salarie, Noeud head)
+        
+        public Multitree(Salairie DirecteurG, List<Salairie> ListSalaries)
         {
-            Noeud temp = null;
+            this.head = new MTreeNode(DirecteurG);
+            Stack<Salairie> Directeurs = new Stack<Salairie>();
+            Stack<Salairie> ChefEquipes = new Stack<Salairie>();
+            Stack<Salairie> Salairies = new Stack<Salairie>();
+
+            foreach (Salairie salarie in ListSalaries)
+            {
+                if (salarie.Classement == EClassement.Directeur)
+                {
+                    Directeurs.Push(salarie);
+                }
+                else if (salarie.Classement == EClassement.ChefEquipe)
+                {
+                    ChefEquipes.Push(salarie);
+                }
+                else
+                {
+                    Salairies.Push(salarie);
+                }
+            }
+
+            for (int i = 0; i < Directeurs.Count; i++)
+            {
+                head.AjouterSalairie(Directeurs.Pop());
+            }
+
+            for (int i = 0; i < ChefEquipes.Count; i++)
+            {
+                foreach (MTreeNode directeur in head.SSousResponsable)
+                {
+                    if (ChefEquipes.Peek().Department == directeur.Salairie.Department)
+                    {
+                        directeur.AjouterSalairie(ChefEquipes.Pop());
+                    }
+                }
+            }
+        }
+        public static MTreeNode ChercherSalairie(int NSS, MTreeNode head)
+        {
+            MTreeNode temp = null;
             if (head != null)
             {
-                if (salarie.Equals(head.Salarie))
+                if (head.Salairie.NumeroSecuriteSociale == NSS)
                 {
                     temp = head; //Si c'est match
                 }
-                else //Sinon cherche les branches fils
+                else //Sinon chercher les fils
                 {
                     for (int i = 0; i < head.NChildren && temp == null; i++)
                     {
-                        temp = search_node_r(salarie, head.Children[i]);
+                        temp = ChercherSalairie(NSS, head.SSousResponsable[i]);
                     }
                 }
             }
             return temp;
         }
-
-        
-        public static void read_file(ref Noeud head, string filePath)
+        public static MTreeNode ChercherSalairie(Salairie salairie, MTreeNode head)
         {
-            Noeud temp = null;
-            int n;
-            string name, child;
-            using (StreamReader sr = new StreamReader(filePath))
+            MTreeNode temp = null;
+            if (head != null)
             {
-                string strLine = string.Empty;
-                while ((strLine = sr.ReadLine()) != null)
+                if (salairie.Equals(head.Salairie))
                 {
-                    string[] strings = strLine.Split(' ');
-                    name = strings[0];
-                    n = int.Parse(strings[1]);
-                    if (head == null) 
+                    temp = head; //Si c'est match
+                }
+                else //Sinon chercher les fils
+                {
+                    for (int i = 0; i < head.NChildren && temp == null; i++)
                     {
-                        temp = head = new Noeud();
-                        temp.Salarie = name; 
-                    }
-                    else
-                    {
-                        temp = search_node_r(name, head);
-                    }
-                    
-                    temp.NChildren = n;
-                    for (int i = 0; i < n; i++)
-                    {
-                        child = strings[i + 2];
-                        temp.Children.Add(new Noeud());
-                        temp.Children[i].Name = child;
+                        temp = ChercherSalairie(salairie, head.SSousResponsable[i]);
                     }
                 }
             }
-
+            return temp;
         }
-
-        private static void f1(Noeud head)
+        public bool Integrer(Salairie NewSalairie, Salairie OldSalairie)
         {
-            Noeud tNoeud;
-            Queue<Noeud> queue = new Queue<Noeud>(100); 
-            Stack<Noeud> stack = new Stack<Noeud>(100); 
-            head.Level = 0; 
-            queue.Enqueue(head);
-
-            while (queue.Count != 0) 
+            if (NewSalairie != null|| OldSalairie != null)
             {
-                tNoeud = queue.Dequeue(); 
-                for (int i = 0; i < tNoeud.NChildren; i++)
+                if (NewSalairie.Classement == EClassement.Stagier || NewSalairie.Department == OldSalairie.Department)
                 {
-                    tNoeud.Children[i].Level = tNoeud.Level + 1; 
-                    queue.Enqueue(tNoeud.Children[i]); 
+                    ChercherSalairie(OldSalairie.NumeroSecuriteSociale, this.head).AjouterSalairie(NewSalairie);
+                    NewSalairie.SetDateEntree();
                 }
-                stack.Push(tNoeud); 
+                else 
+                { 
+                    return false; 
+                }
+                return true;
             }
-
-            while (stack.Count != 0)
-            {
-                tNoeud = stack.Pop();  
-                System.Diagnostics.Debug.WriteLine("   {0} {1}", tNoeud.Level, tNoeud.Name);
-            }
+            return false;
         }
-
-        private static void f2(Noeud head, string str, ref string strBest, int level)
+        public static MTreeNode Licencier(Salairie SalairieToLicencie, MTreeNode head)
         {
-            if (head == null) return;
-            var tmp = str + head.Name;
-
-            if (head.NChildren == 0)
+            MTreeNode temp = null;
+            if (head != null)
             {
-                if (strBest == null || tmp.Length > strBest.Length)
+                if (SalairieIsExist(SalairieToLicencie, head.SSousResponsable))
+                { 
+                    foreach (MTreeNode salairie in head.SSousResponsable)
+                    {
+                        if (salairie.Salairie.Equals(SalairieToLicencie))
+                        {
+                            head.SSousResponsable.Remove(salairie);
+                        }
+                    }
+                }
+                else //Sinon chercher les fils
                 {
-                    strBest = tmp;
+                    for (int i = 0; i < head.NChildren && temp == null; i++)
+                    {
+                        temp = Licencier(SalairieToLicencie, head.SSousResponsable[i]);
+                    }
                 }
             }
-            for (var i = 0; i < head.NChildren; i++)
+            return temp;
+        }
+        public void ChangementPostSalairie(String NewPoste, Salairie lowsalairie, Salairie supsalairie)
+        {
+            Salairie temp = null;
+            if (lowsalairie != null && supsalairie != null)
             {
-                f2(head.Children[i], tmp, ref strBest, level + 1);
+                temp = lowsalairie;
+                Licencier(lowsalairie,this.head);
+                temp.ChangementPost(NewPoste);
+                ChercherSalairie(supsalairie.NumeroSecuriteSociale, this.head).AjouterSalairie(temp);
+
             }
         }
-
-        private void free_tree_r(Noeud head)
+        private static bool SalairieIsExist(Salairie salairietoseach,List<MTreeNode> SSousResponsable)
+        {
+            foreach(MTreeNode salairie in SSousResponsable)
+            {
+                if (salairie.Salairie.Equals(salairietoseach))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private void free_tree_r(MTreeNode head)
         {
             if (head == null)
                 return;

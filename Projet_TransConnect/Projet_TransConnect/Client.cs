@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projet_TransConnect_TANG.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
@@ -13,22 +14,22 @@ namespace Projet_TransConnect_TANG
         nom,
         montantaccumule
     }
-    public class Client : Personne, IComparable
+    public class Client : Personne, IComparable<Client>, IMoyenne
     {
         List<Commande> commandesclient;
-        double montantaccumule = 0;
-        Criteres critere;
+        double montantaccumule;
+        Criteres critere= Criteres.nom;
 
         String ville;
         public Client(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, int telephone, string ville)
             : base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone)
         {
             this.ville = ville;
+            this.montantaccumule = 0;
         }
-
         public void FinCommande(Commande commande)
         {
-            this.commandesclient.Append(commande);
+            this.commandesclient.Add(commande);
         }
         public List<Commande> CommandesClient
         {
@@ -63,25 +64,38 @@ namespace Projet_TransConnect_TANG
                     break;
             }
         }
-        public int CompareTo(object obj)
+        public int CompareTo(Client client)
         {
-            Client c = obj as Client;
-
             switch (this.critere)
             {
                 case Criteres.ville:
-                    return this.ville.CompareTo(c.ville);
+                    return this.ville.CompareTo(client.ville);
 
                 case Criteres.nom:
-                    return this.nom.CompareTo(c.nom);
+                    return this.nom.CompareTo(client.nom);
 
                 case Criteres.montantaccumule:
-                    return this.montantaccumule.CompareTo(c.montantaccumule);
+                    return this.montantaccumule.CompareTo(client.montantaccumule);
 
                 default:
-                    return this.nom.CompareTo(c.nom);
+                    return this.nom.CompareTo(client.nom);
             }
-
+        }
+        public void AfficherCommandes()
+        {
+            foreach(Commande commande in commandesclient)
+            {
+                Console.WriteLine(commande.ToString());
+            }
+        }
+        public double Moyenne()
+        {
+            double somme = 0;
+            foreach(Commande commande in commandesclient)
+            {
+                somme = +commande.Prix;
+            }
+            return somme/commandesclient.Count;
         }
     }
 }
