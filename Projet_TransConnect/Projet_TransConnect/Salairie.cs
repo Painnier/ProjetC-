@@ -17,7 +17,7 @@ namespace Projet_TransConnect_TANG
         protected EClassement classement;
         protected EDepartment department;
 
-        public Salairie(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, int telephone, string poste, EClassement classement, EDepartment department, double salaire, int anciennete) :base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone)
+        public Salairie(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone, string poste, EClassement classement, EDepartment department, double salaire, int anciennete) :base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone)
         {
             this.poste = poste;
             this.salaire = salaire;
@@ -43,8 +43,8 @@ namespace Projet_TransConnect_TANG
         }
         public EDepartment Department
         {
-            get { return Department; }
-            set { Department = value; }
+            get { return department; }
+            set { department = value; }
         }
         #endregion
         #region Fonction public

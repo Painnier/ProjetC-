@@ -16,7 +16,7 @@ namespace Projet_TransConnect_TANG
         public MTreeNode(Salairie salarie)
         {
             this.salarie = salarie;
-            children = null;
+            children = new List<MTreeNode>();
         }
         public MTreeNode()
         {
@@ -52,18 +52,9 @@ namespace Projet_TransConnect_TANG
         }
         #endregion
         #region Fonction public
-        public bool AjouterSalairie(Salairie salairie)
+        public void AjouterSalairie(Salairie salairie)
         {
-            if(children == null)
-            {
-                children = new List<MTreeNode>();
-            }
-            if (this != null && salairie != null)
-            {
-                this.children.Add(new MTreeNode(salairie));
-                return true;
-            }
-            return false;
+            this.children.Add(new MTreeNode(salairie));
         }
         #endregion
     }

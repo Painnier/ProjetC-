@@ -10,7 +10,7 @@ namespace Projet_TransConnect_TANG
     public class Chauffeur : Salairie, IMoyenne, ICloneable<Chauffeur>
     {
         List<Commande> commandes;
-        public Chauffeur(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, int telephone, string poste, EClassement classement, EDepartment department, double salaire, int anciennete) : base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone, poste, classement, department, salaire, anciennete)
+        public Chauffeur(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone, string poste, EClassement classement, EDepartment department, double salaire, int anciennete) : base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone, poste, classement, department, salaire, anciennete)
         {
             commandes = new List<Commande>();
         }

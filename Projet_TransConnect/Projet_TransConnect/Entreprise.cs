@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Projet_TransConnect_TANG
 {
@@ -30,10 +31,14 @@ namespace Projet_TransConnect_TANG
     {
         List<Commande> commandes;
         List<Client> clients;
-        public Entreprise()
+        List<Salairie> salairies;
+        Multitree Organigramme;
+        public Entreprise(Salairie DirecteurG, List<Salairie> salairies)
         {
             this.commandes = new List<Commande>();
             this.clients = new List<Client>();
+            this.salairies = salairies;
+            this.Organigramme = new Multitree(DirecteurG, salairies);
         }
         public void AjouterClient(Client client)
         {
@@ -42,6 +47,26 @@ namespace Projet_TransConnect_TANG
         public void AjouterCommande(Commande commande)
         {
             this.commandes.Add(commande);
+        }
+        public Salairie ChercherSalairie(int NSS)
+        {
+            return Multitree.ChercherSalairie(NSS, Organigramme.Head).Salairie;
+        }
+        public bool Integrer(Salairie NewSalairie, Salairie SupSalairie)
+        {
+            return Organigramme.Integrer(NewSalairie, SupSalairie);
+        }
+        public void Licencier(Salairie SalairieToLicencie)
+        {
+            Multitree.Licencier(SalairieToLicencie, Organigramme.Head);
+        }
+        public void ChangementPostSalairie(String NewPoste, Salairie lowsalairie, Salairie supsalairie)
+        {
+            Organigramme.ChangementPostSalairie(NewPoste, lowsalairie, supsalairie);
+        }
+        public void AfficherOrganigramme()
+        {
+            Organigramme.AfficherOrganigramme();
         }
         private void CommandesByDates(DateTime DateA, DateTime DateB) 
         {

@@ -21,7 +21,7 @@ namespace Projet_TransConnect_TANG
         Criteres critere= Criteres.nom;
 
         String ville;
-        public Client(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, int telephone, string ville)
+        public Client(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone, string ville)
             : base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone)
         {
             this.ville = ville;

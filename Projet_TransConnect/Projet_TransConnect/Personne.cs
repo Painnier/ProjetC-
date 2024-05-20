@@ -14,8 +14,8 @@ namespace Projet_TransConnect_TANG
         protected DateTime datenaissance;
         protected string adressepostale;
         protected string adresseemail;
-        protected int telephone;
-        public Personne(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail,int telephone) 
+        protected string telephone;
+        public Personne(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone) 
         {
             this.numerosecuritesociale = numerosecuritesociale;
             this.nom = nom;
@@ -55,7 +55,7 @@ namespace Projet_TransConnect_TANG
             get { return adresseemail; }
             set { this.adresseemail = value;}
         }
-        public int Telephone
+        public string Telephone
         {
             get { return telephone; }
             set { this.telephone = value; }

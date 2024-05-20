@@ -12,13 +12,18 @@ namespace Projet_TransConnect_TANG
 {
     public partial class Menu : Form
     {
-        public Menu()
+        private Entreprise transconnect;
+        public Menu(Entreprise TransConnect)
         {
+            this.transconnect = TransConnect;
             InitializeComponent();
             splitContainer1.IsSplitterFixed = false;
             splitContainer1.FixedPanel = FixedPanel.Panel1;
         }
-
+        public Entreprise TransConnect
+        {
+            set { this.transconnect = value; }
+        }
         private void Page_Load(object sender, EventArgs e)
         {
 

@@ -15,23 +15,28 @@ namespace Projet_TransConnect_TANG
         private Form menu;
         private Form organigramme;
         private Form testunitaire;
+        public Entreprise transconnect;
 
-        public MenuPrincipal()
+        public MenuPrincipal(Entreprise TransConnect)
         {
+            this.transconnect = TransConnect;
             InitializeComponent();
             splitContainer1.IsSplitterFixed = false;
             splitContainer1.FixedPanel = FixedPanel.Panel1;
         }
-
+        public Entreprise TransConnect
+        { 
+            set { this.transconnect = value; } 
+        }
         private void Menu_Load(object sender, EventArgs e)
         {
-            menu = new Menu();
+            menu = new Menu(this.transconnect);
             InitializeChildForm(menu);
 
-            organigramme = new Organigramme();
+            organigramme = new Organigramme(this.transconnect);
             InitializeChildForm(organigramme);
 
-            testunitaire = new TestUnitaire();
+            testunitaire = new TestUnitaire(this.transconnect);
             InitializeChildForm(testunitaire);
         }
 

@@ -12,13 +12,18 @@ namespace Projet_TransConnect_TANG
 {
     public partial class TestUnitaire : Form
     {
-        public TestUnitaire()
+        private Entreprise transconnect;
+        public TestUnitaire(Entreprise TransConnect)
         {
+            this.transconnect = TransConnect;
             InitializeComponent();
             splitContainer1.IsSplitterFixed = false;
             splitContainer1.FixedPanel = FixedPanel.Panel1;
         }
-
+        public Entreprise TransConnect
+        {
+            set { this.transconnect = value; }
+        }
         private void Page_Load(object sender, EventArgs e)
         {
         }
