@@ -33,8 +33,14 @@ namespace Projet_TransConnect_TANG
         List<Client> clients;
         List<Salairie> salairies;
         Multitree Organigramme;
-        public Entreprise(Salairie DirecteurG, List<Salairie> salairies)
+        public Entreprise(Salairie DirecteurG, List<Salairie> salairies, List<string[]> Distances)
         {
+            String[] Starts = Distances[0];
+            String[] Ends = Distances[1];
+            int[] Kms = ConvertHelper.ToIntArray(Distances[2]);
+            int[] Time = ConvertHelper.HoursToMins(Distances[3]);
+            String[] vexss = ConvertHelper.Villes(Starts, Ends);
+            EData[] edgess = new EData[Starts.Length];
             this.commandes = new List<Commande>();
             this.clients = new List<Client>();
             this.salairies = salairies;

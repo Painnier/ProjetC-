@@ -24,6 +24,7 @@ namespace Projet_TransConnect_TANG
         public Client(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone, string ville)
             : base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone)
         {
+            this.commandesclient = new List<Commande>();
             this.ville = ville;
             this.montantaccumule = 0;
         }

@@ -15,6 +15,9 @@ namespace Projet_TransConnect_TANG
         [STAThread]
         public static void Main(string[] args)
         {
+            // Lecture de fichier Distance.csv
+            List<string[]> Distances = CSVHelper.ReadCSV(@"..\..\Distances.csv");
+
             // Directeur Général
             Salairie Dupond = new Salairie(123456789, "Dupond", "Jean", new DateTime(1965, 4, 23), "Adresse Dupond", "dupond@company.com", "1234567890", "Directeur Général", EClassement.Directeur, EDepartment.Operation, 8000, 20);
 
@@ -49,7 +52,7 @@ namespace Projet_TransConnect_TANG
                 new Salairie(1123456789, "GrosSous", "Paul", new DateTime(1979, 4, 11), "Adresse GrosSous", "grossous@company.com", "11234567890", "Contrôleur de Gestion", EClassement.ChefEquipe, EDepartment.Financier, 4500, 11)//18***
             };
             //Création TransConnect
-            Entreprise TransConnect = new Entreprise(Dupond, salairies);
+            Entreprise TransConnect = new Entreprise(Dupond, salairies, Distances);
             TransConnect.Integrer(salairies[1], salairies[0]);
             TransConnect.Integrer(salairies[2], salairies[0]);
             TransConnect.Integrer(salairies[5], salairies[4]);
@@ -62,9 +65,7 @@ namespace Projet_TransConnect_TANG
             TransConnect.Integrer(salairies[16], salairies[15]);
             TransConnect.Integrer(salairies[17], salairies[15]);
 
-            TransConnect.AfficherOrganigramme();
-
-            List<string[]> Distances = CSVHelper.ReadCSV(@"..\..\Distances.csv");
+            
             String[] Starts = Distances[0];
             String[] Ends = Distances[1];
             int[] Kms = ConvertHelper.ToIntArray(Distances[2]);
