@@ -81,7 +81,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer4);
             this.splitContainer2.Size = new System.Drawing.Size(1447, 201);
-            this.splitContainer2.SplitterDistance = 720;
+            this.splitContainer2.SplitterDistance = 719;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer3
@@ -89,8 +89,8 @@
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer3.Location = new System.Drawing.Point(0, 0);
             this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Size = new System.Drawing.Size(720, 201);
-            this.splitContainer3.SplitterDistance = 350;
+            this.splitContainer3.Size = new System.Drawing.Size(719, 201);
+            this.splitContainer3.SplitterDistance = 349;
             this.splitContainer3.TabIndex = 0;
             // 
             // splitContainer4
@@ -98,7 +98,7 @@
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer4.Location = new System.Drawing.Point(0, 0);
             this.splitContainer4.Name = "splitContainer4";
-            this.splitContainer4.Size = new System.Drawing.Size(723, 201);
+            this.splitContainer4.Size = new System.Drawing.Size(724, 201);
             this.splitContainer4.SplitterDistance = 365;
             this.splitContainer4.TabIndex = 0;
             // 

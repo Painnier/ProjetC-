@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projet_TransConnect_TANG.Pages
+namespace Projet_TransConnect_TANG
 {
     public partial class MenuClient : Form
     {
@@ -43,6 +43,11 @@ namespace Projet_TransConnect_TANG.Pages
         }
 
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
         {
 
         }
