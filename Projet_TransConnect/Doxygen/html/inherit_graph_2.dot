@@ -1,0 +1,9 @@
+digraph "Graphe hiérarchique des classes"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="Projet_TransConnect\l_TANG.Entreprise",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_projet___trans_connect___t_a_n_g_1_1_entreprise.html",tooltip="Classe représentant une entreprise avec ses salariés, clients, commandes et organigramme."];
+}

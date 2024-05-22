@@ -1,14 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projet_TransConnect_TANG
 {
+    /// <summary>
+    /// Représente un nœud de sommet dans un graphe.
+    /// </summary>
     public class VNode
     {
-        public String data;          // 顶点信息
-        public ENode firstEdge;    // 指向第一条依附该顶点的弧
+        /// <summary>
+        /// Les informations du sommet.
+        /// </summary>
+        public String data;
+
+        /// <summary>
+        /// Pointeur vers la première arête attachée à ce sommet.
+        /// </summary>
+        public ENode firstEdge;
     }
 }

@@ -19,9 +19,9 @@ namespace Projet_TransConnect_TANG
         List<Commande> commandesclient;
         double montantaccumule;
         Criteres critere= Criteres.nom;
-
         String ville;
-        public Client(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone, string ville)
+
+        public Client(string numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone, string ville)
             : base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone)
         {
             this.commandesclient = new List<Commande>();
@@ -39,6 +39,11 @@ namespace Projet_TransConnect_TANG
         public double MontantAccumule
         {
             get { return montantaccumule; }
+        }
+        public string Ville
+        { 
+            get { return ville; } 
+            set { ville = value; }
         }
         public void Accumuler()
         {

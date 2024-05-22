@@ -1,0 +1,23 @@
+digraph "Projet_TransConnect_TANG.Programme.GererClients"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Projet_TransConnect\l_TANG.Programme.GererClients",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Menu de gestion des clients."];
+  Node1 -> Node2 [id="edge8_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Projet_TransConnect\l_TANG.Programme.AfficherClients\lParMontantAccumule",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_projet___trans_connect___t_a_n_g_1_1_programme.html#aae4fa64a2ee848aacd3af52590bb8f8f",tooltip="Affiche les clients par montant accumulé des commandes."];
+  Node1 -> Node3 [id="edge9_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Projet_TransConnect\l_TANG.Programme.AfficherClients\lParNom",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_projet___trans_connect___t_a_n_g_1_1_programme.html#a6214353ccdf4ee3ba2a4edcbb1f5591e",tooltip="Affiche les clients par ordre alphabétique de nom."];
+  Node1 -> Node4 [id="edge10_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Projet_TransConnect\l_TANG.Programme.AfficherClients\lParVille",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_projet___trans_connect___t_a_n_g_1_1_programme.html#a707406067d06b06827b38b53b64b69d1",tooltip="Affiche les clients par ville."];
+  Node1 -> Node5 [id="edge11_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Projet_TransConnect\l_TANG.Programme.AfficherTous\lLesClients",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_projet___trans_connect___t_a_n_g_1_1_programme.html#adfcdc38fc112751002b3e41d4807b067",tooltip="Affiche tous les clients."];
+  Node1 -> Node6 [id="edge12_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Projet_TransConnect\l_TANG.Programme.AjouterClient",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_projet___trans_connect___t_a_n_g_1_1_programme.html#a8475f73dbec09a6974a6297b18065e00",tooltip="Ajoute un nouveau client."];
+  Node1 -> Node7 [id="edge13_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Projet_TransConnect\l_TANG.Programme.ModifierClient",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_projet___trans_connect___t_a_n_g_1_1_programme.html#a678a8a06cb0b512dd3581156ecbb3809",tooltip="Modifie les informations d'un client."];
+  Node1 -> Node8 [id="edge14_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Projet_TransConnect\l_TANG.Programme.SupprimerClient",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_projet___trans_connect___t_a_n_g_1_1_programme.html#abee7fae24daf01022b3cb82e145e64c7",tooltip="Supprime un client."];
+}

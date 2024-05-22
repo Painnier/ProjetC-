@@ -12,11 +12,27 @@ namespace Projet_TransConnect_TANG
 {
     public partial class MenuClient : Form
     {
-        public MenuClient()
-        {
-            InitializeComponent();
-        }
+        private Form creercommande;
 
+        public Entreprise transconnect;
+        public MenuClient(Entreprise transconnect)
+        {
+            this.transconnect = transconnect;
+            InitializeComponent();
+            splitContainer1.IsSplitterFixed = false;
+            splitContainer1.FixedPanel = FixedPanel.Panel1;
+        }
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            creercommande = new MenuEntreprise(this.transconnect);
+            InitializeChildForm(creercommande);
+        }
+        private void InitializeChildForm(Form childForm)
+        {
+            childForm.Dock = DockStyle.Fill;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.TopLevel = false;
+        }
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -50,6 +66,17 @@ namespace Projet_TransConnect_TANG
         private void label4_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowForm(creercommande);
+        }
+        private void ShowForm(Form form)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            splitContainer1.Panel2.Controls.Add(form);
+            form.Show();
         }
     }
 }

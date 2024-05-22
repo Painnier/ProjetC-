@@ -8,14 +8,14 @@ namespace Projet_TransConnect_TANG
 {
     public abstract class Personne
     {
-        protected int numerosecuritesociale;
+        protected string numerosecuritesociale;
         protected string nom;
         protected string prenom;
         protected DateTime datenaissance;
         protected string adressepostale;
         protected string adresseemail;
         protected string telephone;
-        public Personne(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone) 
+        public Personne(string numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone) 
         {
             this.numerosecuritesociale = numerosecuritesociale;
             this.nom = nom;
@@ -25,10 +25,10 @@ namespace Projet_TransConnect_TANG
             this.adresseemail = adresseemail;
             this.telephone = telephone;
         }
-        public int NumeroSecuriteSociale
+        public string NumeroSecuriteSociale
         {
             get { return numerosecuritesociale; }
-            //set { this.numerosecuritesociale = value; }
+            set { this.numerosecuritesociale = value; }
         }
         public string Nom
         {
@@ -38,12 +38,12 @@ namespace Projet_TransConnect_TANG
         public string Prenom
         { 
             get { return nom; } 
-            //set {  this.nom = value; } 
+            set {  this.nom = value; } 
         }
         public DateTime DateNaissance
         {
             get { return datenaissance; }
-            //set { this.datenaissance = value; }
+            set { this.datenaissance = value; }
         }
         public string AdressePostale
         {

@@ -1,0 +1,290 @@
+\doxysection{Référence de la classe Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree}
+\hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree}{}\label{class_projet___trans_connect___t_a_n_g_1_1_multitree}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+
+
+Graphe de collaboration de Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree\+:
+% FIG 0
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a63c019f8d27ccb77ab268837819c45f6}{Multitree}} (\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}} DirecteurG, List$<$ \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}} $>$ List\+Salaries)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_projet___trans_connect___t_a_n_g_1_1_multitree}{Multitree}, qui initialise l\textquotesingle{}arborescence avec un directeur général et une liste de salariés. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_aa8168996ee5159df6b2d5a8792bbc4c9}{Integrer}} (\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}} New\+Salairie, \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}} Sup\+Salairie)
+\begin{DoxyCompactList}\small\item\em Intègre un nouveau salarié sous un supérieur hiérarchique. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a728789b9dd6cd4534d4c79c977839bd7}{Changement\+Post\+Salairie}} (String New\+Poste, \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}} lowsalairie, \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}} supsalairie)
+\begin{DoxyCompactList}\small\item\em Change le poste d\textquotesingle{}un salarié et le réintègre sous un nouveau supérieur hiérarchique. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_acd51291e17892755e5431e6531c84ba3}{Afficher\+Organigramme}} ()
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}organigramme de l\textquotesingle{}entreprise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a0265d5347e9df6a627d807e3fac9d885}{Chercher\+Salairie}} (string NSS, \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a84f84aed8c3afcada01259ad6f20fec2}{head}})
+\begin{DoxyCompactList}\small\item\em Cherche un salarié par son numéro de sécurité sociale dans l\textquotesingle{}arborescence. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a290a96170964d9867d294971a9c8b8c1}{Chercher\+Salairie}} (\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}} salairie, \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a84f84aed8c3afcada01259ad6f20fec2}{head}})
+\begin{DoxyCompactList}\small\item\em Cherche un salarié dans l\textquotesingle{}arborescence. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a3a064eee0b2f3c1f21169b7f3a2c6cbf}{Licencier}} (\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}} Salairie\+To\+Licencie, \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a84f84aed8c3afcada01259ad6f20fec2}{head}})
+\begin{DoxyCompactList}\small\item\em Licencie un salarié de l\textquotesingle{}arborescence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propriétés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_afb7425f713be36c66393fab35044bba0}{Head}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Obtient le nœud racine de l\textquotesingle{}arborescence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a5a2ac1b26ad450bf83cf4ffe5c6f6af7}{Afficher\+Sous\+Responsables}} (\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} node, int niveau, bool est\+Dernier, List$<$ bool $>$ prefixe\+Parent)
+\begin{DoxyCompactList}\small\item\em Affiche les sous-\/responsables de manière récursive. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_aa1afff33925f8857052d27d5865d6ef2}{free\+\_\+tree\+\_\+r}} (\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a84f84aed8c3afcada01259ad6f20fec2}{head}})
+\begin{DoxyCompactList}\small\item\em Libère les ressources de l\textquotesingle{}arborescence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres privées statiques}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a645edb888c529695a1c23844470ecf4b}{Salairie\+Is\+Exist}} (\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}} salairietoseach, List$<$ \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} $>$ SSous\+Responsable)
+\begin{DoxyCompactList}\small\item\em Vérifie si un salarié existe parmi les sous-\/responsables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_multitree_a84f84aed8c3afcada01259ad6f20fec2}{head}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_a63c019f8d27ccb77ab268837819c45f6}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!Multitree@{Multitree}}
+\index{Multitree@{Multitree}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{Multitree()}{Multitree()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_a63c019f8d27ccb77ab268837819c45f6} 
+Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+Multitree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}}}]{DirecteurG}{, }\item[{List$<$ \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}} $>$}]{List\+Salaries}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{class_projet___trans_connect___t_a_n_g_1_1_multitree}{Multitree}, qui initialise l\textquotesingle{}arborescence avec un directeur général et une liste de salariés. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em DirecteurG} & Directeur général de l\textquotesingle{}entreprise.\\
+\hline
+{\em List\+Salaries} & Liste des salariés de l\textquotesingle{}entreprise.\\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 1
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_acd51291e17892755e5431e6531c84ba3}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!AfficherOrganigramme@{AfficherOrganigramme}}
+\index{AfficherOrganigramme@{AfficherOrganigramme}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{AfficherOrganigramme()}{AfficherOrganigramme()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_acd51291e17892755e5431e6531c84ba3} 
+void Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+Afficher\+Organigramme (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}organigramme de l\textquotesingle{}entreprise. 
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 2
+Voici le graphe des appelants de cette fonction \+:
+% FIG 3
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_a5a2ac1b26ad450bf83cf4ffe5c6f6af7}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!AfficherSousResponsables@{AfficherSousResponsables}}
+\index{AfficherSousResponsables@{AfficherSousResponsables}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{AfficherSousResponsables()}{AfficherSousResponsables()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_a5a2ac1b26ad450bf83cf4ffe5c6f6af7} 
+void Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+Afficher\+Sous\+Responsables (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}}}]{node}{, }\item[{int}]{niveau}{, }\item[{bool}]{est\+Dernier}{, }\item[{List$<$ bool $>$}]{prefixe\+Parent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Affiche les sous-\/responsables de manière récursive. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em node} & Nœud courant de l\textquotesingle{}arborescence.\\
+\hline
+{\em niveau} & Niveau du nœud courant.\\
+\hline
+{\em est\+Dernier} & Indique si le nœud courant est le dernier enfant.\\
+\hline
+{\em prefixe\+Parent} & Préfixe des parents pour l\textquotesingle{}affichage.\\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 4
+Voici le graphe des appelants de cette fonction \+:
+% FIG 5
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_a728789b9dd6cd4534d4c79c977839bd7}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!ChangementPostSalairie@{ChangementPostSalairie}}
+\index{ChangementPostSalairie@{ChangementPostSalairie}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{ChangementPostSalairie()}{ChangementPostSalairie()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_a728789b9dd6cd4534d4c79c977839bd7} 
+void Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+Changement\+Post\+Salairie (\begin{DoxyParamCaption}\item[{String}]{New\+Poste}{, }\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}}}]{lowsalairie}{, }\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}}}]{supsalairie}{}\end{DoxyParamCaption})}
+
+
+
+Change le poste d\textquotesingle{}un salarié et le réintègre sous un nouveau supérieur hiérarchique. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em New\+Poste} & Nouveau poste du salarié.\\
+\hline
+{\em lowsalairie} & Salarié à changer de poste.\\
+\hline
+{\em supsalairie} & Nouveau supérieur hiérarchique.\\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 6
+Voici le graphe des appelants de cette fonction \+:
+% FIG 7
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_a290a96170964d9867d294971a9c8b8c1}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!ChercherSalairie@{ChercherSalairie}}
+\index{ChercherSalairie@{ChercherSalairie}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{ChercherSalairie()}{ChercherSalairie()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_a290a96170964d9867d294971a9c8b8c1} 
+static \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+Chercher\+Salairie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}}}]{salairie}{, }\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}}}]{head}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Cherche un salarié dans l\textquotesingle{}arborescence. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em salairie} & Salarié à chercher.\\
+\hline
+{\em head} & Nœud racine de l\textquotesingle{}arborescence.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nœud contenant le salarié recherché ou null si non trouvé.
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 8
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_a0265d5347e9df6a627d807e3fac9d885}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!ChercherSalairie@{ChercherSalairie}}
+\index{ChercherSalairie@{ChercherSalairie}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{ChercherSalairie()}{ChercherSalairie()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_a0265d5347e9df6a627d807e3fac9d885} 
+static \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+Chercher\+Salairie (\begin{DoxyParamCaption}\item[{string}]{NSS}{, }\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}}}]{head}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Cherche un salarié par son numéro de sécurité sociale dans l\textquotesingle{}arborescence. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em NSS} & Numéro de sécurité sociale du salarié.\\
+\hline
+{\em head} & Nœud racine de l\textquotesingle{}arborescence.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nœud contenant le salarié recherché ou null si non trouvé.
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 9
+Voici le graphe des appelants de cette fonction \+:
+% FIG 10
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_aa1afff33925f8857052d27d5865d6ef2}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!free\_tree\_r@{free\_tree\_r}}
+\index{free\_tree\_r@{free\_tree\_r}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{free\_tree\_r()}{free\_tree\_r()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_aa1afff33925f8857052d27d5865d6ef2} 
+void Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+free\+\_\+tree\+\_\+r (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}}}]{head}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Libère les ressources de l\textquotesingle{}arborescence. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em head} & Nœud racine de l\textquotesingle{}arborescence.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_aa8168996ee5159df6b2d5a8792bbc4c9}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!Integrer@{Integrer}}
+\index{Integrer@{Integrer}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{Integrer()}{Integrer()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_aa8168996ee5159df6b2d5a8792bbc4c9} 
+void Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+Integrer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}}}]{New\+Salairie}{, }\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}}}]{Sup\+Salairie}{}\end{DoxyParamCaption})}
+
+
+
+Intègre un nouveau salarié sous un supérieur hiérarchique. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em New\+Salairie} & Nouveau salarié à intégrer.\\
+\hline
+{\em Sup\+Salairie} & Supérieur hiérarchique.\\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 11
+Voici le graphe des appelants de cette fonction \+:
+% FIG 12
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_a3a064eee0b2f3c1f21169b7f3a2c6cbf}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!Licencier@{Licencier}}
+\index{Licencier@{Licencier}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{Licencier()}{Licencier()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_a3a064eee0b2f3c1f21169b7f3a2c6cbf} 
+static \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+Licencier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}}}]{Salairie\+To\+Licencie}{, }\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}}}]{head}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Licencie un salarié de l\textquotesingle{}arborescence. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Salairie\+To\+Licencie} & Salarié à licencier.\\
+\hline
+{\em head} & Nœud racine de l\textquotesingle{}arborescence.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nœud contenant le salarié licencié ou null si non trouvé.
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 13
+Voici le graphe des appelants de cette fonction \+:
+% FIG 14
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_a645edb888c529695a1c23844470ecf4b}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!SalairieIsExist@{SalairieIsExist}}
+\index{SalairieIsExist@{SalairieIsExist}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{SalairieIsExist()}{SalairieIsExist()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_a645edb888c529695a1c23844470ecf4b} 
+static bool Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+Salairie\+Is\+Exist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Salairie}}}]{salairietoseach}{, }\item[{List$<$ \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} $>$}]{SSous\+Responsable}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Vérifie si un salarié existe parmi les sous-\/responsables. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em salairietoseach} & Salarié à rechercher.\\
+\hline
+{\em SSous\+Responsable} & Liste des sous-\/responsables.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+True si le salarié existe, sinon False.
+\end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:
+% FIG 15
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_a84f84aed8c3afcada01259ad6f20fec2}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!head@{head}}
+\index{head@{head}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_a84f84aed8c3afcada01259ad6f20fec2} 
+\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+head\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Documentation des propriétés}
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_multitree_afb7425f713be36c66393fab35044bba0}\index{Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}!Head@{Head}}
+\index{Head@{Head}!Projet\_TransConnect\_TANG.Multitree@{Projet\_TransConnect\_TANG.Multitree}}
+\doxysubsubsection{\texorpdfstring{Head}{Head}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_multitree_afb7425f713be36c66393fab35044bba0} 
+\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_m_tree_node}{MTree\+Node}} Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Multitree.\+Head\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Obtient le nœud racine de l\textquotesingle{}arborescence. 
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+TANG/source/repos/\+Painnier/\+Projet\+C-\//\+Projet\+\_\+\+Trans\+Connect/\+Projet\+\_\+\+Trans\+Connect/\mbox{\hyperlink{_multitree_8cs}{Multitree.\+cs}}\end{DoxyCompactItemize}

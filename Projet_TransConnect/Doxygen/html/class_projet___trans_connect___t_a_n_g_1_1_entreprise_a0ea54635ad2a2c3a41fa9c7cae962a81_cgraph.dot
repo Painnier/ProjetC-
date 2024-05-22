@@ -1,0 +1,16 @@
+digraph "Projet_TransConnect_TANG.Entreprise.Integrer"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Projet_TransConnect\l_TANG.Entreprise.Integrer",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Intègre un nouveau salarié dans l'organigramme sous la supervision d'un supérieur hiérarchique."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Projet_TransConnect\l_TANG.Multitree.Integrer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_projet___trans_connect___t_a_n_g_1_1_multitree.html#aa8168996ee5159df6b2d5a8792bbc4c9",tooltip="Intègre un nouveau salarié sous un supérieur hiérarchique."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Projet_TransConnect\l_TANG.Multitree.ChercherSalairie",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_projet___trans_connect___t_a_n_g_1_1_multitree.html#a0265d5347e9df6a627d807e3fac9d885",tooltip="Cherche un salarié par son numéro de sécurité sociale dans l'arborescence."];
+  Node3 -> Node3 [id="edge3_Node000003_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node4 [id="edge4_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Projet_TransConnect\l_TANG.Salairie.SetDateEntree",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_projet___trans_connect___t_a_n_g_1_1_salairie.html#a80330c67d73583133381206254ce0ebd",tooltip=" "];
+}

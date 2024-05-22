@@ -7,23 +7,28 @@ using System.Threading.Tasks;
 
 namespace Projet_TransConnect_TANG
 {
-    public class Chauffeur : Salairie, IMoyenne, ICloneable<Chauffeur>
+    public class Chauffeur : Salairie, IMoyenne
     {
         List<Commande> commandes;
-        public Chauffeur(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone, string poste, EClassement classement, EDepartment department, double salaire, int anciennete) : base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone, poste, classement, department, salaire, anciennete)
+
+        public Chauffeur(string numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone, string poste, EClassement classement, EDepartment department, int salaire, int anciennete) : base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone, poste, classement, department, salaire, anciennete)
         {
             commandes = new List<Commande>();
         }
-        public void FinCommande(Commande commande)
+        public int Anciennete
+        {  
+            get { return anciennete; }
+        }
+        public override void FinCommande(Commande commande)
         {
             if (base.poste == EClassement.Chauffeur.ToString())
             {
                 this.commandes.Add(commande);
             }
         }
-        public void AffNbCommandesLivrees()
+        public string NbCommandesLivrees()
         {
-            Console.WriteLine(commandes.Count.ToString());
+            return commandes.Count.ToString();
         }
         public override string ToString()
         {

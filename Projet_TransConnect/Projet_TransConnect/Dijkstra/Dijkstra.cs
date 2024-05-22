@@ -6,31 +6,31 @@ using System.Threading.Tasks;
 
 namespace Projet_TransConnect_TANG
 {
+    /// <summary>
+    /// Représente l'algorithme de Dijkstra pour le calcul des plus courts chemins.
+    /// </summary>
     public class Dijkstra
     {
         public static int MAX = int.MaxValue;
         public String[] vexss;
-        public int mEdgNum;    // 边的数量
-        public VNode[] mVexs;  // 顶点数组
+        public int mEdgNum;    // Nombre de bords
+        public VNode[] mVexs;  // Tableau de sommets
         int distance;
 
-
-        /*
-         * 创建图
-         *
-         * 参数说明：
-         *     vexs  -- 顶点数组
-         *     edges -- 边
-         */
+        /// <summary>
+        /// Constructeur de la classe Dijkstra.
+        /// </summary>
+        /// <param name="vexs">Tableau des noms des sommets.</param>
+        /// <param name="edges">Tableau des bords du graphe.</param>
         public Dijkstra(String[] vexs, EData[] edges)
         {
             this.distance = 0;
             this.vexss = vexs;
-            // 初始化"顶点数"和"边数"
+            // Initialisation du nombre de sommets et de bords
             int vlen = vexs.Length;
             int elen = edges.Length;
 
-            // 初始化"顶点"
+            // Initialisation des sommets
             mVexs = new VNode[vlen];
             for (int i = 0; i < mVexs.Length; i++)
             {
@@ -39,58 +39,69 @@ namespace Projet_TransConnect_TANG
                 mVexs[i].firstEdge = null;
             }
 
-            // 初始化"边"
+            // Initialisation des bords
             mEdgNum = elen;
             for (int i = 0; i < elen; i++)
             {
-                // 读取边的起始顶点和结束顶点
+                // Lecture du sommet de départ et du sommet de fin pour chaque bord
                 String c1 = edges[i].start;
                 String c2 = edges[i].end;
                 int weight = edges[i].weight;
 
-                // 读取边的起始顶点和结束顶点
+                // Position des sommets dans le tableau
                 int p1 = GetPosition(c1);
                 int p2 = GetPosition(c2);
-                // 初始化node1
+
+                // Initialisation du premier nœud
                 ENode node1 = new ENode();
                 node1.ivex = p2;
                 node1.weight = weight;
-                // 将node1链接到"p1所在链表的末尾"
+
+                // Ajout du nœud au sommet de départ
                 if (mVexs[p1].firstEdge == null)
                     mVexs[p1].firstEdge = node1;
                 else
                     LinkLast(mVexs[p1].firstEdge, node1);
-                // 初始化node2
+
+                // Initialisation du second nœud (pour le graphe non orienté)
                 ENode node2 = new ENode();
                 node2.ivex = p1;
                 node2.weight = weight;
-                // 将node2链接到"p2所在链表的末尾"
+
+                // Ajout du nœud au sommet de fin
                 if (mVexs[p2].firstEdge == null)
                     mVexs[p2].firstEdge = node2;
                 else
                     LinkLast(mVexs[p2].firstEdge, node2);
             }
         }
+
+        /// <summary>
+        /// Obtient la distance calculée par l'algorithme de Dijkstra.
+        /// </summary>
         public int Distance
         {
             get { return distance; }
         }
 
-        /*
-         * 将node节点链接到list的最后
-         */
+        /// <summary>
+        /// Ajoute un nœud à la fin de la liste des bords.
+        /// </summary>
+        /// <param name="list">Liste des bords.</param>
+        /// <param name="node">Nœud à ajouter.</param>
         private void LinkLast(ENode list, ENode node)
         {
             ENode p = list;
-
             while (p.nextEdge != null)
                 p = p.nextEdge;
             p.nextEdge = node;
         }
 
-        /*
-         * 返回ch位置
-         */
+        /// <summary>
+        /// Retourne la position d'un sommet dans le tableau.
+        /// </summary>
+        /// <param name="ch">Nom du sommet.</param>
+        /// <returns>Position du sommet dans le tableau.</returns>
         private int GetPosition(String ch)
         {
             for (int i = 0; i < mVexs.Length; i++)
@@ -98,74 +109,74 @@ namespace Projet_TransConnect_TANG
                     return i;
             return -1;
         }
-        /*
-        * Dijkstra最短路径。
-        * 即，统计图中"起点D"到其它各个顶点的最短路径。
-        *
-        * 参数说明：
-        *       vs -- 起始顶点(start vertex)。
-        *     prev -- 前驱顶点数组。即，prev[i]的值是"起点D"到"顶点i"的最短路径所经历的全部顶点中，位于"顶点i"之前的那个顶点。
-        *     dist -- 长度数组。即，dist[i]是"起点D"到"顶点i"的最短路径的长度。
-        */
+
+        /// <summary>
+        /// Calcule les plus courts chemins depuis un sommet donné en utilisant l'algorithme de Dijkstra.
+        /// </summary>
+        /// <param name="start">Nom du sommet de départ.</param>
+        /// <param name="end">Nom du sommet de fin.</param>
+        /// <returns>Tableau des sommets précédents sur le chemin le plus court.</returns>
         public int[] CalcDijkstra(String start, String end)
         {
-            // flag[i]=true表示"起点D"到"顶点i"的最短路径已成功获取。
-            bool[] flag = new bool[mVexs.Length];
+            bool[] flag = new bool[mVexs.Length]; // Indique si le plus court chemin vers un sommet a été trouvé
             int vs = Array.IndexOf(this.vexss, start);
-            int[] dist = new int[this.mVexs.Length];
-            int[] chemin = new int[this.mVexs.Length];
+            int[] dist = new int[this.mVexs.Length]; // Tableau des distances
+            int[] chemin = new int[this.mVexs.Length]; // Tableau des sommets précédents
 
-            // 初始化
+            // Initialisation
             for (int i = 0; i < mVexs.Length; i++)
             {
-                flag[i] = false;            // 顶点i的最短路径还没获取到。
-                chemin[i] = 0;                // 顶点i的前驱顶点为0。
-                dist[i] = GetWeight(vs, i); // 顶点i的最短路径为"起点D"到"顶点i"的权。
+                flag[i] = false;
+                chemin[i] = 0;
+                dist[i] = GetWeight(vs, i);
             }
 
-            // 对"起点D"自身进行初始化
+            // Initialisation pour le sommet de départ
             flag[vs] = true;
             dist[vs] = 0;
 
-            // 遍历mVexs.Length-1次；每次找出一个顶点的最短路径。
-            int k = 0;
+            // Recherche des plus courts chemins pour les autres sommets
             for (int i = 1; i < mVexs.Length; i++)
             {
-                // 寻找当前最小的路径
-                // 即，在未获取最短路径的顶点中，找到离起点D最近的顶点(k)。
                 int min = MAX;
+                int k = 0;
+
+                // Recherche du sommet avec la plus petite distance
                 for (int j = 0; j < mVexs.Length; j++)
                 {
-                    if (flag[j] == false && dist[j] < min)
+                    if (!flag[j] && dist[j] < min)
                     {
                         min = dist[j];
-                        k = j;//找到当前最短的路线
+                        k = j;
                     }
                 }
-                // 标记"顶点k"为已经获取到最短路径
+
+                // Marque le sommet comme trouvé
                 flag[k] = true;
 
-                // 更新当前最短路径和前驱顶点
-                // 即，更新"未获取最短路径的顶点的最短路径和前驱顶点"。
+                // Met à jour les distances pour les sommets adjacents
                 for (int j = 0; j < mVexs.Length; j++)
                 {
-                    int tmp = GetWeight(k, j);//找到当前最短的路线与其他路线的距离
-                    tmp = (tmp == MAX ? MAX : (min + tmp)); // 防止溢出
-                    if (flag[j] == false && (tmp < dist[j]))
+                    int tmp = GetWeight(k, j);
+                    tmp = (tmp == MAX ? MAX : (min + tmp));
+                    if (!flag[j] && (tmp < dist[j]))
                     {
                         dist[j] = tmp;
                         chemin[j] = k;
                     }
                 }
             }
-            
+
             this.distance = dist[Array.IndexOf(this.vexss, end)];
             return chemin;
         }
 
-        /*
-         * 获取边<start, end>的权值；若start和end不是连通的，则返回无穷大。
-         */
+        /// <summary>
+        /// Obtient le poids de l'arête entre deux sommets.
+        /// </summary>
+        /// <param name="start">Sommet de départ.</param>
+        /// <param name="end">Sommet d'arrivée.</param>
+        /// <returns>Poids de l'arête entre les deux sommets, ou MAX si les sommets ne sont pas connectés.</returns>
         private int GetWeight(int start, int end)
         {
             if (start == end)

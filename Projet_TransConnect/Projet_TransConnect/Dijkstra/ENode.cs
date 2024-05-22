@@ -1,15 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projet_TransConnect_TANG
 {
+    /// <summary>
+    /// Représente un nœud d'arête dans un graphe.
+    /// </summary>
     public class ENode
     {
-        public int ivex;       // 该边所指向的顶点的位置
-        public int weight;     // 该边的权
-        public ENode nextEdge; // 指向下一条弧的指针
+        /// <summary>
+        /// L'indice du sommet auquel cette arête est connectée.
+        /// </summary>
+        public int ivex;
+
+        /// <summary>
+        /// Le poids de l'arête.
+        /// </summary>
+        public int weight;
+
+        /// <summary>
+        /// Pointeur vers la prochaine arête dans la liste.
+        /// </summary>
+        public ENode nextEdge;
     }
 }

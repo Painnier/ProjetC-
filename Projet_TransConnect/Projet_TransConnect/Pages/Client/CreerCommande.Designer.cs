@@ -2,15 +2,8 @@
 {
     partial class CreerCommande
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,13 +15,11 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -74,6 +65,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.textBox9);
+            this.splitContainer1.Panel1.Controls.Add(this.label13);
             this.splitContainer1.Panel1.Controls.Add(this.textBox3);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.textBox1);
@@ -97,6 +90,22 @@
             this.splitContainer1.Size = new System.Drawing.Size(1040, 497);
             this.splitContainer1.SplitterDistance = 189;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(33, 410);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.TabIndex = 35;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(30, 394);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 13);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Destination :";
             // 
             // textBox3
             // 
@@ -143,6 +152,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 20;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
             // 
@@ -200,6 +210,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 22;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label8
             // 
@@ -255,11 +266,13 @@
             // 
             this.splitContainer3.Panel1.Controls.Add(this.label12);
             this.splitContainer3.Panel1.Controls.Add(this.label9);
+            this.splitContainer3.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer3_Panel1_Paint);
             // 
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.label11);
             this.splitContainer3.Panel2.Controls.Add(this.label10);
+            this.splitContainer3.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer3_Panel2_Paint);
             this.splitContainer3.Size = new System.Drawing.Size(847, 384);
             this.splitContainer3.SplitterDistance = 202;
             this.splitContainer3.TabIndex = 0;
@@ -309,8 +322,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(847, 109);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Ok";
+            this.button1.Text = "Créer Commande";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CreerCommande
             // 
@@ -319,7 +333,7 @@
             this.ClientSize = new System.Drawing.Size(1040, 497);
             this.Controls.Add(this.splitContainer1);
             this.Name = "CreerCommande";
-            this.Text = "CreerCommande";
+            this.Text = "Créer Commande";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -365,5 +379,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label13;
     }
 }

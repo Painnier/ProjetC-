@@ -53,57 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chauffeur.cs" />
-    <Compile Include="Pages\Client\ConsultationCommandes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pages\Client\ConsultationCommandes.Designer.cs">
-      <DependentUpon>ConsultationCommandes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Client\CreerCommande.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pages\Client\CreerCommande.Designer.cs">
-      <DependentUpon>CreerCommande.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dijkstra\Dijkstra.cs" />
     <Compile Include="Dijkstra\EData.cs" />
     <Compile Include="Dijkstra\ENode.cs" />
     <Compile Include="Dijkstra\VNode.cs" />
-    <Compile Include="Pages\Client\MenuClient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pages\Client\MenuClient.Designer.cs">
-      <DependentUpon>MenuClient.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\MenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pages\MenuPrincipal.Designer.cs">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Entreprise\Oraganigramme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pages\Entreprise\Oraganigramme.Designer.cs">
-      <DependentUpon>Oraganigramme.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Entreprise\Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pages\Entreprise\Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\TestUnitaire.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pages\TestUnitaire.Designer.cs">
-      <DependentUpon>TestUnitaire.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ICloneable.cs" />
     <Compile Include="Interfaces\IMoyenne.cs" />
     <Compile Include="Helpers\ConvertHelper.cs" />
     <Compile Include="Helpers\CSVHelper.cs" />
-    <Compile Include="Interfaces\IConvertPrix.cs" />
     <Compile Include="Multitree.cs" />
     <Compile Include="Programme.cs" />
     <Compile Include="Véhicule\Camionnette.cs" />
@@ -135,29 +91,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\Client\ConsultationCommandes.resx">
-      <DependentUpon>ConsultationCommandes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Client\CreerCommande.resx">
-      <DependentUpon>CreerCommande.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Client\MenuClient.resx">
-      <DependentUpon>MenuClient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Entreprise\Oraganigramme.resx">
-      <DependentUpon>Oraganigramme.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\Entreprise\Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\TestUnitaire.resx">
-      <DependentUpon>TestUnitaire.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

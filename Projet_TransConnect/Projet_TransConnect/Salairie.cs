@@ -11,19 +11,20 @@ namespace Projet_TransConnect_TANG
     public class Salairie : Personne
     {
         protected string poste;
-        protected double salaire;
+        protected int salaire;
         protected DateTime dateentree;
         protected int anciennete;
         protected EClassement classement;
         protected EDepartment department;
 
-        public Salairie(int numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone, string poste, EClassement classement, EDepartment department, double salaire, int anciennete) :base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone)
+        public Salairie(string numerosecuritesociale, string nom, string prenom, DateTime datenaissance, string adressepostale, string adresseemail, string telephone, string poste, EClassement classement, EDepartment department, int salaire, int anciennete) : base(numerosecuritesociale, nom, prenom, datenaissance, adressepostale, adresseemail, telephone)
         {
             this.poste = poste;
             this.salaire = salaire;
-            this.anciennete = anciennete;
             this.classement = classement;
             this.department = department;
+            this.anciennete = anciennete;
+            this.anciennete = anciennete;
         }
         #region Property
         public string Poste
@@ -31,7 +32,7 @@ namespace Projet_TransConnect_TANG
             get { return poste; }
             set { poste = value; }
         }
-        public double Salaire
+        public int Salaire
         {
             get { return salaire; }
             set { salaire = value; }
@@ -56,6 +57,7 @@ namespace Projet_TransConnect_TANG
         {
             this.dateentree = DateTime.Now;
         }
+        public virtual void FinCommande(Commande commande) { }
         public void ChangementPost(String newposte)
         {
             if (this.poste ==  newposte)

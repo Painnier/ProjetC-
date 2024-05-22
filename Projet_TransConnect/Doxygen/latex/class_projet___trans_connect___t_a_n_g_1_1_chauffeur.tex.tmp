@@ -1,0 +1,177 @@
+\doxysection{Référence de la classe Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Chauffeur}
+\hypertarget{class_projet___trans_connect___t_a_n_g_1_1_chauffeur}{}\label{class_projet___trans_connect___t_a_n_g_1_1_chauffeur}\index{Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}}
+
+
+Graphe d\textquotesingle{}héritage de Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Chauffeur\+:
+% FIG 0
+
+
+Graphe de collaboration de Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Chauffeur\+:
+% FIG 1
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_ad3721661f28de3660929f4c2e258826d}{Chauffeur}} (string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a96ead8562e1848dd829e8835a92db402}{numerosecuritesociale}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a7d1500dd94114a19584a3fe2f9ab6892}{nom}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a8f0b78e7532101b3495f9dc8b797fef2}{prenom}}, Date\+Time \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a674c662701e91d863374bd1b57ba2e1f}{datenaissance}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a8ca5533cf17f2e34fe3cc0cf0f162313}{adressepostale}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a298b49cf49ffcd13b99acb9c4d310dde}{adresseemail}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a9cf6b43c86c1704b80e1d2d9e484db5d}{telephone}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a6864f50d77c9867826f326bdd6436dbe}{poste}}, \mbox{\hyperlink{namespace_projet___trans_connect___t_a_n_g_ab2b86a9ce32a4299574368cc21c8d7ad}{EClassement}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a74751883f8ccc59b9d403e4bc70e9f66}{classement}}, \mbox{\hyperlink{namespace_projet___trans_connect___t_a_n_g_a94960f041a78f0be88644c2c9fca31f4}{EDepartment}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a03fc08526093a6f113391fb3e0b79b0a}{department}}, int \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a98de7fa1fc4240f67c14c1012d799c40}{salaire}}, int \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a94f2f236f34c7e5909259cb2d1513fbe}{anciennete}})
+\item 
+override void \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a653a78012c7b03a0ddfc9eb14d45de8d}{Fin\+Commande}} (\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_commande}{Commande}} commande)
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a476070a3061d7a5ce990c3769268d514}{Nb\+Commandes\+Livrees}} ()
+\item 
+override string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a268d2a7a2011c704e7120fa78d649966}{To\+String}} ()
+\item 
+double \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a4ad7aafe99a5e9fb302d8e7b13f39948}{Moyenne}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Salairie}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_abe3a940985598ed6c66fef122ef7b1c9}{Salairie}} (string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a96ead8562e1848dd829e8835a92db402}{numerosecuritesociale}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a7d1500dd94114a19584a3fe2f9ab6892}{nom}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a8f0b78e7532101b3495f9dc8b797fef2}{prenom}}, Date\+Time \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a674c662701e91d863374bd1b57ba2e1f}{datenaissance}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a8ca5533cf17f2e34fe3cc0cf0f162313}{adressepostale}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a298b49cf49ffcd13b99acb9c4d310dde}{adresseemail}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a9cf6b43c86c1704b80e1d2d9e484db5d}{telephone}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a6864f50d77c9867826f326bdd6436dbe}{poste}}, \mbox{\hyperlink{namespace_projet___trans_connect___t_a_n_g_ab2b86a9ce32a4299574368cc21c8d7ad}{EClassement}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a74751883f8ccc59b9d403e4bc70e9f66}{classement}}, \mbox{\hyperlink{namespace_projet___trans_connect___t_a_n_g_a94960f041a78f0be88644c2c9fca31f4}{EDepartment}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a03fc08526093a6f113391fb3e0b79b0a}{department}}, int \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a98de7fa1fc4240f67c14c1012d799c40}{salaire}}, int \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a94f2f236f34c7e5909259cb2d1513fbe}{anciennete}})
+\item 
+override string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a94af0cb38a5dad4a37fc804cd9bc9840}{To\+String}} ()
+\item 
+void \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a80330c67d73583133381206254ce0ebd}{Set\+Date\+Entree}} ()
+\item 
+void \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_ae7891c1e65cf58104a23fcce7d3d5c5c}{Changement\+Post}} (String newposte)
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne}{Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Personne}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a30c320b023ec8f7e17daa64bd5cb3fe9}{Personne}} (string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a96ead8562e1848dd829e8835a92db402}{numerosecuritesociale}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a7d1500dd94114a19584a3fe2f9ab6892}{nom}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a8f0b78e7532101b3495f9dc8b797fef2}{prenom}}, Date\+Time \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a674c662701e91d863374bd1b57ba2e1f}{datenaissance}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a8ca5533cf17f2e34fe3cc0cf0f162313}{adressepostale}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a298b49cf49ffcd13b99acb9c4d310dde}{adresseemail}}, string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a9cf6b43c86c1704b80e1d2d9e484db5d}{telephone}})
+\item 
+override string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a2c1b5797c2c81c9ecce19ea20309337a}{To\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Propriétés}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_ac3c7c3bb5a725f1fdfdb803cae5244ad}{Anciennete}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Propriétés hérités de \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Salairie}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a067392e6cbd3e71beffcec00f77387d4}{Poste}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_ad44ac0449cebda5291f5c3d6b5de0ee6}{Salaire}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{namespace_projet___trans_connect___t_a_n_g_ab2b86a9ce32a4299574368cc21c8d7ad}{EClassement}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a4ab8da36bc5fa9f7e642f2b233e76751}{Classement}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{namespace_projet___trans_connect___t_a_n_g_a94960f041a78f0be88644c2c9fca31f4}{EDepartment}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a606876ec4496f39639edcf06c1d4742c}{Department}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Propriétés hérités de \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne}{Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Personne}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a79a1ab38d83131b3e6ee9190fe2733b0}{Numero\+Securite\+Sociale}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a6bb51159f0f598b6d05a922c8486d9bf}{Nom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_ac1f7f604a5f853cc88cfd079d426355d}{Prenom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Date\+Time \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a0608f727f556bf4545abc2ecb0165658}{Date\+Naissance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a9cc92c66b10c17d9ac14e6ad5e8276ab}{Adresse\+Postale}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_abab74be59a9b596bfe179641e655224e}{Adresse\+Email}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a4086f5a75a9cb982736057c8a596d197}{Telephone}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_commande}{Commande}} $>$ \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a9579e93b449c11960e8d3fbf6b088575}{commandes}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hérités additionnels}
+\doxysubsection*{Attributs protégés hérités de \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie}{Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Salairie}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a6864f50d77c9867826f326bdd6436dbe}{poste}}
+\item 
+int \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a98de7fa1fc4240f67c14c1012d799c40}{salaire}}
+\item 
+Date\+Time \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_afa87365b803ac31426861a7d0302ab09}{dateentree}}
+\item 
+int \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a94f2f236f34c7e5909259cb2d1513fbe}{anciennete}}
+\item 
+\mbox{\hyperlink{namespace_projet___trans_connect___t_a_n_g_ab2b86a9ce32a4299574368cc21c8d7ad}{EClassement}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a74751883f8ccc59b9d403e4bc70e9f66}{classement}}
+\item 
+\mbox{\hyperlink{namespace_projet___trans_connect___t_a_n_g_a94960f041a78f0be88644c2c9fca31f4}{EDepartment}} \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a03fc08526093a6f113391fb3e0b79b0a}{department}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés hérités de \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne}{Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Personne}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a96ead8562e1848dd829e8835a92db402}{numerosecuritesociale}}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a7d1500dd94114a19584a3fe2f9ab6892}{nom}}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a8f0b78e7532101b3495f9dc8b797fef2}{prenom}}
+\item 
+Date\+Time \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a674c662701e91d863374bd1b57ba2e1f}{datenaissance}}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a8ca5533cf17f2e34fe3cc0cf0f162313}{adressepostale}}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a298b49cf49ffcd13b99acb9c4d310dde}{adresseemail}}
+\item 
+string \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_personne_a9cf6b43c86c1704b80e1d2d9e484db5d}{telephone}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_ad3721661f28de3660929f4c2e258826d}\index{Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}!Chauffeur@{Chauffeur}}
+\index{Chauffeur@{Chauffeur}!Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}}
+\doxysubsubsection{\texorpdfstring{Chauffeur()}{Chauffeur()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_ad3721661f28de3660929f4c2e258826d} 
+Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Chauffeur.\+Chauffeur (\begin{DoxyParamCaption}\item[{string}]{numerosecuritesociale}{, }\item[{string}]{nom}{, }\item[{string}]{prenom}{, }\item[{Date\+Time}]{datenaissance}{, }\item[{string}]{adressepostale}{, }\item[{string}]{adresseemail}{, }\item[{string}]{telephone}{, }\item[{string}]{poste}{, }\item[{\mbox{\hyperlink{namespace_projet___trans_connect___t_a_n_g_ab2b86a9ce32a4299574368cc21c8d7ad}{EClassement}}}]{classement}{, }\item[{\mbox{\hyperlink{namespace_projet___trans_connect___t_a_n_g_a94960f041a78f0be88644c2c9fca31f4}{EDepartment}}}]{department}{, }\item[{int}]{salaire}{, }\item[{int}]{anciennete}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a653a78012c7b03a0ddfc9eb14d45de8d}\index{Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}!FinCommande@{FinCommande}}
+\index{FinCommande@{FinCommande}!Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}}
+\doxysubsubsection{\texorpdfstring{FinCommande()}{FinCommande()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a653a78012c7b03a0ddfc9eb14d45de8d} 
+override void Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Chauffeur.\+Fin\+Commande (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_commande}{Commande}}}]{commande}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_salairie_a8ba7898bc8027a0993c8f2c4026f538f}{Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Salairie}}.
+
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a4ad7aafe99a5e9fb302d8e7b13f39948}\index{Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}!Moyenne@{Moyenne}}
+\index{Moyenne@{Moyenne}!Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}}
+\doxysubsubsection{\texorpdfstring{Moyenne()}{Moyenne()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a4ad7aafe99a5e9fb302d8e7b13f39948} 
+double Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Chauffeur.\+Moyenne (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a476070a3061d7a5ce990c3769268d514}\index{Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}!NbCommandesLivrees@{NbCommandesLivrees}}
+\index{NbCommandesLivrees@{NbCommandesLivrees}!Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}}
+\doxysubsubsection{\texorpdfstring{NbCommandesLivrees()}{NbCommandesLivrees()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a476070a3061d7a5ce990c3769268d514} 
+string Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Chauffeur.\+Nb\+Commandes\+Livrees (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a268d2a7a2011c704e7120fa78d649966}\index{Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}!ToString@{ToString}}
+\index{ToString@{ToString}!Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a268d2a7a2011c704e7120fa78d649966} 
+override string Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Chauffeur.\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 2
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a9579e93b449c11960e8d3fbf6b088575}\index{Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}!commandes@{commandes}}
+\index{commandes@{commandes}!Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}}
+\doxysubsubsection{\texorpdfstring{commandes}{commandes}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_a9579e93b449c11960e8d3fbf6b088575} 
+List$<$\mbox{\hyperlink{class_projet___trans_connect___t_a_n_g_1_1_commande}{Commande}}$>$ Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Chauffeur.\+commandes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Documentation des propriétés}
+\Hypertarget{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_ac3c7c3bb5a725f1fdfdb803cae5244ad}\index{Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}!Anciennete@{Anciennete}}
+\index{Anciennete@{Anciennete}!Projet\_TransConnect\_TANG.Chauffeur@{Projet\_TransConnect\_TANG.Chauffeur}}
+\doxysubsubsection{\texorpdfstring{Anciennete}{Anciennete}}
+{\footnotesize\ttfamily \label{class_projet___trans_connect___t_a_n_g_1_1_chauffeur_ac3c7c3bb5a725f1fdfdb803cae5244ad} 
+int Projet\+\_\+\+Trans\+Connect\+\_\+\+TANG.\+Chauffeur.\+Anciennete\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+TANG/source/repos/\+Painnier/\+Projet\+C-\//\+Projet\+\_\+\+Trans\+Connect/\+Projet\+\_\+\+Trans\+Connect/\mbox{\hyperlink{_chauffeur_8cs}{Chauffeur.\+cs}}\end{DoxyCompactItemize}

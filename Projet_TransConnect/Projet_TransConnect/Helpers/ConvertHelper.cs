@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Projet_TransConnect_TANG
 {
+    /// <summary>
+    /// Classe utilitaire pour les conversions diverses.
+    /// </summary>
     public class ConvertHelper
     {
+        /// <summary>
+        /// Convertit un tableau de chaînes de caractères en tableau d'entiers.
+        /// </summary>
+        /// <param name="lignes">Le tableau de chaînes de caractères à convertir.</param>
+        /// <returns>Un tableau d'entiers convertis.</returns>
         public static int[] ToIntArray(String[] lignes)
         {
             int[] lignesint = new int[lignes.Length];
@@ -20,6 +28,12 @@ namespace Projet_TransConnect_TANG
             }
             return lignesint;
         }
+
+        /// <summary>
+        /// Convertit un tableau de chaînes de caractères représentant des durées en heures et minutes en un tableau de minutes.
+        /// </summary>
+        /// <param name="Hours">Le tableau de chaînes de caractères à convertir.</param>
+        /// <returns>Un tableau d'entiers représentant les durées en minutes.</returns>
         public static int[] HoursToMins(String[] Hours)
         {
             int[] minutes = new int[Hours.Length];
@@ -48,6 +62,13 @@ namespace Projet_TransConnect_TANG
             }
             return minutes;
         }
+
+        /// <summary>
+        /// Fusionne deux tableaux de chaînes de caractères en éliminant les doublons.
+        /// </summary>
+        /// <param name="starts">Le premier tableau de chaînes de caractères.</param>
+        /// <param name="ends">Le second tableau de chaînes de caractères.</param>
+        /// <returns>Un tableau de chaînes de caractères fusionné et sans doublons.</returns>
         public static String[] Villes(String[] starts, String[] ends)
         {
             String[] Starts = starts.Distinct().ToArray();

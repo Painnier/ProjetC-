@@ -12,10 +12,12 @@ namespace Projet_TransConnect_TANG
 {
     public partial class MenuPrincipal : Form
     {
-        private Form menu;
+        private Form entreprise;
+        private Form client;
         private Form organigramme;
         private Form testunitaire;
-        public Entreprise transconnect;
+
+        Entreprise transconnect;
 
         public MenuPrincipal(Entreprise TransConnect)
         {
@@ -30,8 +32,11 @@ namespace Projet_TransConnect_TANG
         }
         private void Menu_Load(object sender, EventArgs e)
         {
-            menu = new Menu(this.transconnect);
-            InitializeChildForm(menu);
+            entreprise = new MenuEntreprise(this.transconnect);
+            InitializeChildForm(entreprise);
+
+            client = new MenuClient(this.transconnect);
+            InitializeChildForm(client);
 
             organigramme = new Organigramme(this.transconnect);
             InitializeChildForm(organigramme);
@@ -47,9 +52,9 @@ namespace Projet_TransConnect_TANG
             childForm.TopLevel = false;
         }
 
-        private void menu_Click(object sender, EventArgs e)
+        private void entreprise_Click(object sender, EventArgs e)
         {
-            ShowForm(menu);
+            ShowForm(entreprise);
         }
 
         private void organigramme_Click(object sender, EventArgs e)
@@ -60,6 +65,10 @@ namespace Projet_TransConnect_TANG
         private void testunitaire_Click(object sender, EventArgs e)
         {
             ShowForm(testunitaire);
+        }
+        private void client_Click(object sender, EventArgs e)
+        {
+            ShowForm(client);
         }
 
         private void ShowForm(Form form)
