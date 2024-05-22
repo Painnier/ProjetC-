@@ -14,20 +14,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 15,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Projet_TransConnect_TANG.csproj.user",
-              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Projet_TransConnect_TANG.csproj.user",
-              "RelativeDocumentMoniker": "Projet_TransConnect\\Projet_TransConnect\\Projet_TransConnect_TANG.csproj.user",
-              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Projet_TransConnect_TANG.csproj.user",
-              "RelativeToolTip": "Projet_TransConnect\\Projet_TransConnect\\Projet_TransConnect_TANG.csproj.user",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
-              "WhenOpened": "2024-04-28T18:26:14.736Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Bookmark",
@@ -84,6 +75,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Projet_TransConnect_TANG.csproj.user",
+              "DocumentMoniker": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Projet_TransConnect_TANG.csproj.user",
+              "RelativeDocumentMoniker": "Projet_TransConnect\\Projet_TransConnect\\Projet_TransConnect_TANG.csproj.user",
+              "ToolTip": "C:\\Users\\TANG\\source\\repos\\Painnier\\ProjetC-\\Projet_TransConnect\\Projet_TransConnect\\Projet_TransConnect_TANG.csproj.user",
+              "RelativeToolTip": "Projet_TransConnect\\Projet_TransConnect\\Projet_TransConnect_TANG.csproj.user",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2024-04-28T18:26:14.736Z",
+              "EditorCaption": ""
             }
           ]
         }

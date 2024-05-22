@@ -9,7 +9,7 @@ namespace Projet_TransConnect_TANG
     public class Voiture : Vehicule
     {
         int nb_passages;
-        public Voiture(int immat, double prixloue, int nb_passage) : base(immat, prixloue)
+        public Voiture(string immat, double prixloue, int nb_passage) : base(immat, prixloue)
         {
             this.nb_passages = nb_passage;
         }

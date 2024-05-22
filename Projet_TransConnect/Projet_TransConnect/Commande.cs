@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace Projet_TransConnect_TANG
 {
-    delegate int CalPrix();
-
     /// <summary>
     /// Représente une commande dans l'entreprise.
     /// </summary>
@@ -19,16 +17,15 @@ namespace Projet_TransConnect_TANG
         String[] Starts, Ends;
         int[] Kms, Times;
         String[] vexss;
-        EData[] edgess;
-
-        CalPrix FacteurKms, FacteurTemps; // Temps en minute
+        EData[] edgess, edgetime;
+        Dijkstra Dij;
 
         Client client;
         string start, end;
         double prix;
         Chauffeur chauffeur;
         Vehicule vehicule;
-        int KmParcouru, TempsUtilise = 0; // Temps en minute
+        int KmParcouru, TempsUtilise; // Temps en minute
 
         DateTime createdate, finaldate;
 
@@ -52,15 +49,27 @@ namespace Projet_TransConnect_TANG
             this.vehicule = vehicule;
             this.start = client.Ville;
             this.end = end;
-            FacteurKms = KmsParcouru;
-            FacteurTemps = TempsParcouru;
-            this.prix = FacteurKms() * PayByKms + chauffeur.Anciennete * FacteurTemps() * PayByTimes;
-            String[] Starts = Distances[0];
-            String[] Ends = Distances[1];
-            int[] Kms = ConvertHelper.ToIntArray(Distances[2]);
-            int[] Times = ConvertHelper.HoursToMins(Distances[3]);
-            String[] vexss = ConvertHelper.Villes(Starts, Ends);
-            EData[] edgess = new EData[Starts.Length];
+            this.Starts = Distances[0];
+            this.Ends = Distances[1];
+            this.Kms = ConvertHelper.ToIntArray(Distances[2]);
+            this.Times = ConvertHelper.HoursToMins(Distances[3]);
+            this.vexss = ConvertHelper.Villes(Starts, Ends);
+            this.edgess = new EData[Starts.Length];
+            for (int i = 0; i < Starts.Length; i++)
+            {
+                this.edgess[i] = new EData(this.Starts[i], this.Ends[i], this.Kms[i]);
+            }
+            this.edgetime = new EData[Starts.Length];
+            for (int i = 0; i < Starts.Length; i++)
+            {
+                this.edgetime[i] = new EData(this.Starts[i], this.Ends[i], this.Times[i]);
+            }
+
+            this.Dij = new Dijkstra(this.vexss, this.edgess, this.edgetime);
+            this.Dij.CalcDijkstra(client.Ville, end);
+            this.KmParcouru = this.Dij.Distance;
+            this.TempsUtilise = this.Dij.TimeTaken;
+            this.prix = KmParcouru * PayByKms + chauffeur.Anciennete * TempsUtilise * PayByTimes + vehicule.PrixLoue;
         }
 
         #region Property
@@ -88,6 +97,7 @@ namespace Projet_TransConnect_TANG
         public double Prix
         {
             get { return this.prix; }
+            set { this.prix = value; }
         }
 
         /// <summary>
@@ -140,45 +150,28 @@ namespace Projet_TransConnect_TANG
         /// <returns>Chaîne de caractères représentant la commande.</returns>
         public override string ToString()
         {
-            return "Client : " + client.ToString() + ", prix : " + prix.ToString() + ", chauffeur : [" + chauffeur.ToString() + "], create date : " + createdate.ToString() + ", véhicule : " + vehicule + ", trajet : " + start + " to " + end;
+            return "Numero Commande : " + numerocommande +  "Client : " + client.ToString() + ", prix : " + prix.ToString() + ", chauffeur : [" + chauffeur.ToString() + "], create date : " + createdate.ToString() + ", véhicule : " + vehicule + ", trajet : " + start + " to " + end + "Temps total utilisé: " + Dij.TimeTaken + "\r\n" + "Chemin : " + AfficherCheminParcouru();
         }
-
+        /// <summary>
+        /// Calcule et retourne le chemin parcouru avec chaque ville encadrée.
+        /// </summary>
+        /// <returns>Le chemin parcouru sous forme de chaîne de caractères.</returns>
+        public string AfficherCheminParcouru()
+        {
+            StringBuilder cheminEncadre = new StringBuilder();
+            cheminEncadre.Append("Chemin parcouru: ");
+            foreach (string ville in this.Dij.Chemin)
+            {
+                cheminEncadre.Append(" --- [ " + ville + " ] ");
+            }
+            return cheminEncadre.ToString();
+        }
         /// <summary>
         /// Marque la commande comme effectuée en définissant la date de finalisation à maintenant.
         /// </summary>
         public void Effectuee()
         {
             this.finaldate = DateTime.Now;
-        }
-
-        /// <summary>
-        /// Calcule le nombre de kilomètres parcourus pour la commande.
-        /// </summary>
-        /// <returns>Nombre de kilomètres parcourus.</returns>
-        private int KmsParcouru()
-        {
-            for (int i = 0; i < Starts.Length; i++)
-            {
-                this.edgess[i] = new EData(this.Starts[i], this.Ends[i], this.Kms[i]);
-            }
-            Dijkstra Dij = new Dijkstra(this.vexss, this.edgess);
-            Dij.CalcDijkstra(this.start, this.end);
-            return Dij.Distance;
-        }
-
-        /// <summary>
-        /// Calcule le temps parcouru en minutes pour la commande.
-        /// </summary>
-        /// <returns>Temps parcouru en minutes.</returns>
-        private int TempsParcouru()
-        {
-            for (int i = 0; i < Starts.Length; i++)
-            {
-                this.edgess[i] = new EData(this.Starts[i], this.Ends[i], this.Times[i]);
-            }
-            Dijkstra Dij = new Dijkstra(this.vexss, this.edgess);
-            Dij.CalcDijkstra(this.start, this.end);
-            return Dij.Distance;
         }
     }
 }

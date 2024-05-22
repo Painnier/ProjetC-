@@ -150,6 +150,19 @@ namespace Projet_TransConnect_TANG
         {
             return Multitree.ChercherSalairie(NSS, Organigramme.Head).Salairie;
         }
+        /// <summary>
+        /// Recherche un salarié dans l'organigramme 
+        /// </summary>
+        /// <param name="salairie"> Salairié.</param>
+        /// <returns>Le salarié trouvé.</returns>
+        public Salairie ChercherSalairie(Salairie salairie)
+        {
+            if (Multitree.ChercherSalairie(salairie, Organigramme.Head) != null)
+            {
+                return Multitree.ChercherSalairie(salairie, Organigramme.Head).Salairie;
+            }
+            return null;
+        }
 
         /// <summary>
         /// Intègre un nouveau salarié dans l'organigramme sous la supervision d'un supérieur hiérarchique.

@@ -18,6 +18,11 @@ namespace Projet_TransConnect_TANG
         public int weight;
 
         /// <summary>
+        /// Le poids temps de l'arête.
+        /// </summary>
+        public int time;
+
+        /// <summary>
         /// Pointeur vers la prochaine arête dans la liste.
         /// </summary>
         public ENode nextEdge;

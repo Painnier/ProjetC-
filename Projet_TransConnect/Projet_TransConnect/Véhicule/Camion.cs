@@ -15,7 +15,7 @@ namespace Projet_TransConnect_TANG
             frigorifique
         }
         private TypeCamion type;
-        public Camion(int immat, double prixloue, TypeCamion type) : base(immat, prixloue)
+        public Camion(string immat, double prixloue, TypeCamion type) : base(immat, prixloue)
         {
             this.type = type;
         }

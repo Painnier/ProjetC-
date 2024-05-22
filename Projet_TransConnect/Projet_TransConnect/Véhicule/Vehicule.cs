@@ -8,14 +8,14 @@ namespace Projet_TransConnect_TANG
 {
     public abstract class Vehicule
     {
-        protected int immat;
+        protected string immat;
         protected double prixloue;
-        public Vehicule(int immat,double prixloue)
+        public Vehicule(string immat,double prixloue)
         {
             this.immat = immat;
             this.prixloue = prixloue;
         }
-        public int Immat
+        public string Immat
         {
             get { return immat; }
         }

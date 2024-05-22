@@ -19,12 +19,13 @@ namespace Projet_TransConnect_TANG
         {  
             get { return anciennete; }
         }
+        public List<Commande> Commandes
+        {
+            get { return commandes; }
+        }
         public override void FinCommande(Commande commande)
         {
-            if (base.poste == EClassement.Chauffeur.ToString())
-            {
-                this.commandes.Add(commande);
-            }
+            this.commandes.Add(commande);
         }
         public string NbCommandesLivrees()
         {
@@ -32,7 +33,7 @@ namespace Projet_TransConnect_TANG
         }
         public override string ToString()
         {
-            return base.ToString();
+            return base.ToString() + "Nombre Commandes Livrees" + NbCommandesLivrees();
         }
         public double Moyenne()
         {

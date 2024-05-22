@@ -38,6 +38,9 @@ namespace Projet_TransConnect_TANG
                     case "4":
                         AfficherStatistiques();
                         break;
+                    case "5":
+                        GererTestsUnitaires();
+                        break;
                     case "0":
                         return;
                     default:
@@ -115,10 +118,65 @@ namespace Projet_TransConnect_TANG
             Console.WriteLine("2. Gestion des Salariés");
             Console.WriteLine("3. Gestion des Commandes");
             Console.WriteLine("4. Afficher les Statistiques");
+            Console.WriteLine("5. Gestion Tests Unitaires");
             Console.WriteLine("0. Quitter");
             Console.Write("Choisissez une option : ");
         }
+        /// <summary>
+        /// Gère les tests unitaires.
+        /// </summary>
+        static void GererTestsUnitaires()
+        {
+            var tests = new TestUnitaire();
 
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("Tests Unitaires");
+                Console.WriteLine("1. Test Dijkstra");
+                Console.WriteLine("2. Test Client");
+                Console.WriteLine("3. Test Commande");
+                Console.WriteLine("4. Test Salarié");
+                Console.WriteLine("5. Test Chauffeur");
+                Console.WriteLine("6. Test Entreprise");
+                Console.WriteLine("7. Exécuter tous les tests");
+                Console.WriteLine("0. Retour au Menu Principal");
+                Console.Write("Choisissez une option : ");
+                var choix = Console.ReadLine();
+                switch (choix)
+                {
+                    case "1":
+                        tests.TestDijkstraCalc();
+                        break;
+                    case "2":
+                        tests.TestAccumuler();
+                        break;
+                    case "3":
+                        tests.TestCreerCommande();
+                        break;
+                    case "4":
+                        tests.TestFinCommande();
+                        break;
+                    case "5":
+                        tests.TestChauffeurDisponible();
+                        break;
+                    case "6":
+                        tests.TestAjouterClient();
+                        break;
+                    case "7":
+                        tests.RunTests();
+                        break;
+                    case "0":
+                        return;
+                    default:
+                        Console.WriteLine("Choix invalide. Veuillez réessayer.");
+                        break;
+                }
+                Console.ReadLine(); // Pause après chaque test
+            }
+        }
+
+        #region GérerClients
         /// <summary>
         /// Menu de gestion des clients.
         /// </summary>
@@ -169,14 +227,13 @@ namespace Projet_TransConnect_TANG
                 }
             }
         }
-
-        #region GérerClients
         /// <summary>
         /// Affiche les clients par ordre alphabétique de nom.
         /// </summary>
         static void AfficherClientsParNom()
         {
-            var clients = TransConnect.Clients.OrderBy(c => c.Nom).ToList();
+            List<Client> clients = new List<Client>(TransConnect.Clients);
+            clients.Sort((c1, c2) => c1.Nom.CompareTo(c2.Nom));
             foreach (var client in clients)
             {
                 Console.WriteLine(client.ToString());
@@ -189,7 +246,8 @@ namespace Projet_TransConnect_TANG
         /// </summary>
         static void AfficherClientsParVille()
         {
-            var clients = TransConnect.Clients.OrderBy(c => c.Ville).ToList();
+            List<Client> clients = new List<Client>(TransConnect.Clients);
+            clients.Sort((c1, c2) => c1.Ville.CompareTo(c2.Ville));
             foreach (var client in clients)
             {
                 Console.WriteLine(client.ToString());
@@ -202,11 +260,12 @@ namespace Projet_TransConnect_TANG
         /// </summary>
         static void AfficherClientsParMontantAccumule()
         {
-            foreach (var client in TransConnect.Clients)
+            List<Client> clients = new List<Client>(TransConnect.Clients);
+            foreach (var client in clients)
             {
                 client.Accumuler();
             }
-            var clients = TransConnect.Clients.OrderByDescending(c => c.MontantAccumule).ToList();
+            clients.Sort((c1, c2) => c2.MontantAccumule.CompareTo(c1.MontantAccumule));
             foreach (var client in clients)
             {
                 Console.WriteLine(client.ToString());
@@ -535,7 +594,7 @@ namespace Projet_TransConnect_TANG
 
                 Vehicule vehicule;
                 Console.Write("Entrez l'immatriculation : ");
-                int immat = int.Parse(Console.ReadLine());
+                string immat = Console.ReadLine();
                 Console.Write("Entrez le prix de location : ");
                 double prixLoue = double.Parse(Console.ReadLine());
 

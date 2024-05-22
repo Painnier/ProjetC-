@@ -62,6 +62,7 @@
     <Compile Include="Helpers\CSVHelper.cs" />
     <Compile Include="Multitree.cs" />
     <Compile Include="Programme.cs" />
+    <Compile Include="TestUnitaire.cs" />
     <Compile Include="Véhicule\Camionnette.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Commande.cs" />

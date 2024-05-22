@@ -149,13 +149,15 @@ namespace Projet_TransConnect_TANG
             {
                 if (SalairieIsExist(SalairieToLicencie, head.SSousResponsable))
                 {
+                    int index;
                     foreach (MTreeNode salairie in head.SSousResponsable)
                     {
                         if (salairie.Salairie.Equals(SalairieToLicencie))
                         {
-                            head.SSousResponsable.Remove(salairie);
+                            temp = salairie;
                         }
                     }
+                    head.SSousResponsable.Remove(temp);
                 }
                 else // Sinon chercher dans les enfants
                 {
