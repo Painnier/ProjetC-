@@ -92,7 +92,9 @@ namespace Projet_TransConnect_TANG
         {
             foreach(Commande commande in commandesclient)
             {
+                Console.WriteLine();
                 Console.WriteLine(commande.ToString());
+                Console.WriteLine();
             }
         }
         public override string ToString()

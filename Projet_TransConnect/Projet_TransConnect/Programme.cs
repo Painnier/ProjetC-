@@ -24,7 +24,7 @@ namespace Projet_TransConnect_TANG
             while (true)
             {
                 AfficherMenuPrincipal();
-                var choix = Console.ReadLine();
+                string choix = Console.ReadLine();
                 switch (choix)
                 {
                     case "1":
@@ -128,7 +128,7 @@ namespace Projet_TransConnect_TANG
         /// </summary>
         static void GererTestsUnitaires()
         {
-            var tests = new TestUnitaire();
+            TestUnitaire tests = new TestUnitaire();
 
             while (true)
             {
@@ -143,7 +143,7 @@ namespace Projet_TransConnect_TANG
                 Console.WriteLine("7. Exécuter tous les tests");
                 Console.WriteLine("0. Retour au Menu Principal");
                 Console.Write("Choisissez une option : ");
-                var choix = Console.ReadLine();
+                string choix = Console.ReadLine();
                 switch (choix)
                 {
                     case "1":
@@ -196,7 +196,7 @@ namespace Projet_TransConnect_TANG
                 Console.WriteLine("7. Afficher les Clients par montant accumulé");
                 Console.WriteLine("0. Retour au Menu Principal");
                 Console.Write("Choisissez une option : ");
-                var choix = Console.ReadLine();
+                string choix = Console.ReadLine();
                 switch (choix)
                 {
                     case "1":
@@ -235,9 +235,11 @@ namespace Projet_TransConnect_TANG
         {
             List<Client> clients = new List<Client>(TransConnect.Clients);
             clients.Sort((c1, c2) => c1.Nom.CompareTo(c2.Nom));
-            foreach (var client in clients)
+            foreach (Client client in clients)
             {
+                CommandesByDates
                 Console.WriteLine(client.ToString());
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
@@ -249,9 +251,11 @@ namespace Projet_TransConnect_TANG
         {
             List<Client> clients = new List<Client>(TransConnect.Clients);
             clients.Sort((c1, c2) => c1.Ville.CompareTo(c2.Ville));
-            foreach (var client in clients)
+            foreach (Client client in clients)
             {
+                CommandesByDates
                 Console.WriteLine(client.ToString());
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
@@ -262,14 +266,16 @@ namespace Projet_TransConnect_TANG
         static void AfficherClientsParMontantAccumule()
         {
             List<Client> clients = new List<Client>(TransConnect.Clients);
-            foreach (var client in clients)
+            foreach (Client client in clients)
             {
                 client.Accumuler();
             }
             clients.Sort((c1, c2) => c2.MontantAccumule.CompareTo(c1.MontantAccumule));
-            foreach (var client in clients)
+            foreach (Client client in clients)
             {
+                CommandesByDates
                 Console.WriteLine(client.ToString());
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
@@ -309,7 +315,7 @@ namespace Projet_TransConnect_TANG
         {
             Console.Write("Entrez le N°SS du client à supprimer : ");
             string nss = Console.ReadLine();
-            var client = TransConnect.Clients.FirstOrDefault(c => c.NumeroSecuriteSociale == nss);
+            Client client = TransConnect.Clients.FirstOrDefault(c => c.NumeroSecuriteSociale == nss);
             if (client != null)
             {
                 TransConnect.Clients.Remove(client);
@@ -329,7 +335,7 @@ namespace Projet_TransConnect_TANG
         {
             Console.Write("Entrez le N°SS du client à modifier : ");
             string nss = Console.ReadLine();
-            var client = TransConnect.Clients.FirstOrDefault(c => c.NumeroSecuriteSociale == nss);
+            Client client = TransConnect.Clients.FirstOrDefault(c => c.NumeroSecuriteSociale == nss);
             if (client != null)
             {
                 Console.Write("Entrez le nouveau nom (laisser vide pour ne pas changer) : ");
@@ -370,9 +376,11 @@ namespace Projet_TransConnect_TANG
         /// </summary>
         static void AfficherTousLesClients()
         {
-            foreach (var client in TransConnect.Clients)
+            foreach (Client client in TransConnect.Clients)
             {
+                Console.WriteLine();
                 Console.WriteLine(client.ToString());
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
@@ -395,7 +403,7 @@ namespace Projet_TransConnect_TANG
                 Console.WriteLine("5. Afficher les chauffeur disponible");
                 Console.WriteLine("0. Retour au Menu Principal");
                 Console.Write("Choisissez une option : ");
-                var choix = Console.ReadLine();
+                string choix = Console.ReadLine();
                 switch (choix)
                 {
                     case "1":
@@ -467,7 +475,7 @@ namespace Projet_TransConnect_TANG
         {
             Console.Write("Entrez le N°SS du salarié à supprimer : ");
             string nss = Console.ReadLine();
-            var salarie = TransConnect.ChercherSalairie(nss);
+            Salarie salarie = TransConnect.ChercherSalairie(nss);
             if (salarie != null)
             {
                 TransConnect.Licencier(salarie);
@@ -556,7 +564,9 @@ namespace Projet_TransConnect_TANG
         {
             foreach (Chauffeur chauffeur in TransConnect.ChauffeursDiponible)
             {
+                Console.WriteLine();
                 Console.WriteLine(chauffeur.ToString());
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
@@ -578,7 +588,7 @@ namespace Projet_TransConnect_TANG
                 Console.WriteLine("4. Afficher les Commandes finies");
                 Console.WriteLine("0. Retour au Menu Principal");
                 Console.Write("Choisissez une option : ");
-                var choix = Console.ReadLine();
+                string choix = Console.ReadLine();
                 switch (choix)
                 {
                     case "1":
@@ -610,77 +620,84 @@ namespace Projet_TransConnect_TANG
             List<string[]> Distances = CSVHelper.ReadCSV(@"..\..\Distances.csv");
             Console.Write("Entrez le N°SS du client : ");
             string nssClient = Console.ReadLine();
-            var client = TransConnect.Clients.FirstOrDefault(c => c.NumeroSecuriteSociale == nssClient);
-            if (client != null)
+            Client client = TransConnect.Clients.FirstOrDefault(c => c.NumeroSecuriteSociale == nssClient);
+            if (TransConnect.ChauffeursDiponible.Count != 0)
             {
-                String[] Starts = Distances[0];
-                String[] Ends = Distances[1];
-                String[] Villes = ConvertHelper.Villes(Starts, Ends);
-                Console.Write("Entrez la destination : ");
-                string destination = Console.ReadLine();
-                if (Villes.Contains(destination) != false)
+                if (client != null)
                 {
-                    // Demander le type de véhicule
-                    Console.WriteLine("Sélectionnez le type de véhicule : ");
-                    Console.WriteLine("1. Voiture");
-                    Console.WriteLine("2. Camionnette");
-                    Console.WriteLine("3. Camion");
-                    int choixVehicule = int.Parse(Console.ReadLine());
-
-                    Vehicule vehicule;
-                    Console.Write("Entrez l'immatriculation : ");
-                    string immat = Console.ReadLine();
-                    Console.Write("Entrez le prix de location : ");
-                    double prixLoue = double.Parse(Console.ReadLine());
-
-                    switch (choixVehicule)
+                    String[] Starts = Distances[0];
+                    String[] Ends = Distances[1];
+                    String[] Villes = ConvertHelper.Villes(Starts, Ends);
+                    Console.Write("Entrez la destination : ");
+                    string destination = Console.ReadLine();
+                    if (Villes.Contains(destination))
                     {
-                        case 1:
-                            Console.Write("Entrez le nombre de places : ");
-                            int nbPlaces = int.Parse(Console.ReadLine());
-                            vehicule = new Voiture(immat, prixLoue, nbPlaces);
-                            break;
-                        case 2:
-                            Console.Write("Entrez l'usage : ");
-                            string usage = Console.ReadLine();
-                            vehicule = new Camionnette(immat, prixLoue, usage);
-                            break;
-                        case 3:
-                            Console.WriteLine("Sélectionnez le type de camion : ");
-                            Console.WriteLine("1. Citerne");
-                            Console.WriteLine("2. Benne");
-                            Console.WriteLine("3. Frigorifique");
-                            int choixTypeCamion = int.Parse(Console.ReadLine());
-                            TypeCamion typeCamion;
-                            switch (choixTypeCamion)
-                            {
-                                case 1:
-                                    typeCamion = TypeCamion.citerne;
-                                    break;
-                                case 2:
-                                    typeCamion = TypeCamion.benne;
-                                    break;
-                                case 3:
-                                    typeCamion = TypeCamion.frigorifique;
-                                    break;
-                                default:
-                                    Console.WriteLine("Choix de type de camion invalide !");
-                                    return;
-                            }
-                            vehicule = new Camion(immat, prixLoue, typeCamion);
-                            break;
-                        default:
-                            Console.WriteLine("Choix de véhicule invalide !");
-                            return;
+                        // Demander le type de véhicule
+                        Console.WriteLine("Sélectionnez le type de véhicule : ");
+                        Console.WriteLine("1. Voiture");
+                        Console.WriteLine("2. Camionnette");
+                        Console.WriteLine("3. Camion");
+                        int choixVehicule = int.Parse(Console.ReadLine());
+
+                        Vehicule vehicule;
+                        Console.Write("Entrez l'immatriculation : ");
+                        string immat = Console.ReadLine();
+                        Console.Write("Entrez le prix de location : ");
+                        double prixLoue = double.Parse(Console.ReadLine());
+
+                        switch (choixVehicule)
+                        {
+                            case 1:
+                                Console.Write("Entrez le nombre de places : ");
+                                int nbPlaces = int.Parse(Console.ReadLine());
+                                vehicule = new Voiture(immat, prixLoue, nbPlaces);
+                                break;
+                            case 2:
+                                Console.Write("Entrez l'usage : ");
+                                string usage = Console.ReadLine();
+                                vehicule = new Camionnette(immat, prixLoue, usage);
+                                break;
+                            case 3:
+                                Console.WriteLine("Sélectionnez le type de camion : ");
+                                Console.WriteLine("1. Citerne");
+                                Console.WriteLine("2. Benne");
+                                Console.WriteLine("3. Frigorifique");
+                                int choixTypeCamion = int.Parse(Console.ReadLine());
+                                TypeCamion typeCamion;
+                                switch (choixTypeCamion)
+                                {
+                                    case 1:
+                                        typeCamion = TypeCamion.citerne;
+                                        break;
+                                    case 2:
+                                        typeCamion = TypeCamion.benne;
+                                        break;
+                                    case 3:
+                                        typeCamion = TypeCamion.frigorifique;
+                                        break;
+                                    default:
+                                        Console.WriteLine("Choix de type de camion invalide !");
+                                        return;
+                                }
+                                vehicule = new Camion(immat, prixLoue, typeCamion);
+                                break;
+                            default:
+                                Console.WriteLine("Choix de véhicule invalide !");
+                                return;
+                        }
+
+                        Chauffeur chauffeur = TransConnect.EnvoyerChauffeurDisponible();
+                        Distances = TransConnect.Distances;
+
+                        Commande commande = new Commande(client, chauffeur, vehicule, destination, Distances);
+                        TransConnect.AjouterCommandeEnCours(commande);
+
+                        Console.WriteLine("Commande créée avec succès !");
                     }
-
-                    Chauffeur chauffeur = TransConnect.EnvoyerChauffeurDisponible();
-                    Distances = TransConnect.Distances;
-
-                    Commande commande = new Commande(client, chauffeur, vehicule, destination, Distances);
-                    TransConnect.AjouterCommandeEnCours(commande);
-
-                    Console.WriteLine("Commande créée avec succès !");
+                    else
+                    {
+                        Console.WriteLine("Ville n'est pas dans les trafics !");
+                    }
                 }
                 else
                 {
@@ -689,7 +706,7 @@ namespace Projet_TransConnect_TANG
             }
             else
             {
-                Console.WriteLine("Client non trouvé !");
+                Console.WriteLine("Il n'y a pas assez de chauffeur !");
             }
             Console.ReadLine();
         }
@@ -703,7 +720,9 @@ namespace Projet_TransConnect_TANG
             Console.WriteLine("Commandes en cours :");
             for (int i = 0; i < TransConnect.CommandesEnCours.Count; i++)
             {
+                Console.WriteLine();
                 Console.WriteLine($"{i + 1}. {TransConnect.CommandesEnCours[i]}");
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
@@ -744,9 +763,11 @@ namespace Projet_TransConnect_TANG
         {
             Console.Clear();
             Console.WriteLine("Commandes finies :");
-            foreach (var commande in TransConnect.CommandesFinies)
+            foreach (Commande commande in TransConnect.CommandesFinies)
             {
+                Console.WriteLine();
                 Console.WriteLine(commande.ToString());
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
@@ -769,7 +790,7 @@ namespace Projet_TransConnect_TANG
                 Console.WriteLine("5. Liste des commandes pour un client");
                 Console.WriteLine("0. Retour au Menu Principal");
                 Console.Write("Choisissez une option : ");
-                var choix = Console.ReadLine();
+                string choix = Console.ReadLine();
                 switch (choix)
                 {
                     case "1":
@@ -803,11 +824,13 @@ namespace Projet_TransConnect_TANG
         {
             Console.Clear();
             Console.WriteLine("Nombre de livraisons effectuées par chauffeur :");
-            foreach (var salarie in TransConnect.ChauffeursDiponible)
+            foreach (Salarie salarie in TransConnect.ChauffeursDiponible)
             {
                 if (salarie is Chauffeur chauffeur)
                 {
+                    Console.WriteLine();
                     Console.WriteLine($"{chauffeur.Nom} {chauffeur.Prenom} : {chauffeur.NbCommandesLivrees()} livraisons");
+                    Console.WriteLine();
                 }
             }
             Console.ReadLine();
@@ -823,12 +846,14 @@ namespace Projet_TransConnect_TANG
             Console.Write("Entrez la date de fin (yyyy-mm-dd) : ");
             DateTime dateFin = DateTime.Parse(Console.ReadLine());
 
-            var commandes = TransConnect.CommandesFinies.Where(c => c.CreateDate >= dateDebut && c.CreateDate <= dateFin).ToList();
+            List<Commande> commandes = TransConnect.CommandesFinies.Where(c => c.CreateDate >= dateDebut && c.CreateDate <= dateFin).ToList();
 
             Console.WriteLine($"Commandes du {dateDebut.ToShortDateString()} au {dateFin.ToShortDateString()} :");
-            foreach (var commande in commandes)
+            foreach (Commande commande in commandes)
             {
+                Console.WriteLine();
                 Console.WriteLine(commande.ToString());
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
@@ -851,6 +876,7 @@ namespace Projet_TransConnect_TANG
             foreach (Client client in TransConnect.Clients)
             {
                 Console.WriteLine(client.ToString() + $"- prix moyen des commandes : {client.Moyenne().ToString()} euros");
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
@@ -862,7 +888,7 @@ namespace Projet_TransConnect_TANG
         {
             Console.Write("Entrez le N°SS du client : ");
             string nss = Console.ReadLine();
-            var client = TransConnect.Clients.FirstOrDefault(c => c.NumeroSecuriteSociale == nss);
+            Client client = TransConnect.Clients.FirstOrDefault(c => c.NumeroSecuriteSociale == nss);
             if (client != null)
             {
                 Console.WriteLine($"Commandes pour le client {client.Nom} {client.Prenom} :");

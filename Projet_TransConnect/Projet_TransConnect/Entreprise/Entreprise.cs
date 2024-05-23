@@ -230,7 +230,9 @@ namespace Projet_TransConnect_TANG
         {
             foreach (Commande commande in commandesfinies)
             {
+                Console.WriteLine();
                 Console.WriteLine(commande);
+                Console.WriteLine();
             }
         }
 
@@ -241,7 +243,9 @@ namespace Projet_TransConnect_TANG
         {
             foreach (Commande commande in commandesencours)
             {
+                Console.WriteLine();
                 Console.WriteLine(commande);
+                Console.WriteLine();
             }
         }
 
@@ -252,7 +256,9 @@ namespace Projet_TransConnect_TANG
         {
             foreach (Chauffeur chauffeur in chauffeursdipo)
             {
+                Console.WriteLine();
                 Console.WriteLine(chauffeur);
+                Console.WriteLine();
             }
         }
         #endregion
@@ -295,22 +301,10 @@ namespace Projet_TransConnect_TANG
         {
             return this.commandesencours[index];
         }
-
         /// <summary>
-        /// Affiche les commandes terminées entre deux dates.
+        /// Le prix moyen des commandes
         /// </summary>
-        /// <param name="DateA">La date de début.</param>
-        /// <param name="DateB">La date de fin.</param>
-        private void CommandesByDates(DateTime DateA, DateTime DateB)
-        {
-            foreach (Commande commande in this.commandesfinies)
-            {
-                if (commande.CreateDate > DateA && commande.CreateDate > DateB)
-                {
-                    Console.WriteLine(commande.ToString());
-                }
-            }
-        }
+        /// <returns></returns>
         public double Moyenne()
         {
             double somme = 0;

@@ -45,12 +45,12 @@ namespace Projet_TransConnect_TANG
         #region Client
         public void TestAccumuler()
         {
-            var client = new Client("456", "Nom", "Prenom", new DateTime(1990, 1, 1), "Adresse", "email@example.com", "1234567890", "Paris");
+            Client client = new Client("456", "Nom", "Prenom", new DateTime(1990, 1, 1), "Adresse", "email@example.com", "1234567890", "Paris");
 
-            var chauffeur = new Chauffeur("789", "Chauffeur", "Test", new DateTime(1985, 3, 25), "Adresse", "email@example.com", "1234567890", "Chauffeur", EClassement.Chauffeur, EDepartment.Operation, 3000, 5);
-            var camionnette = new Camionnette("789QDZAQD", 188.2, "usage");
-            var commande1 = new Commande(client, chauffeur, camionnette, "Rouen", distances) { Prix = 100 };
-            var commande2 = new Commande(client, chauffeur, camionnette, "Rouen", distances) { Prix = 200 };
+            Chauffeur chauffeur = new Chauffeur("789", "Chauffeur", "Test", new DateTime(1985, 3, 25), "Adresse", "email@example.com", "1234567890", "Chauffeur", EClassement.Chauffeur, EDepartment.Operation, 3000, 5);
+            Camionnette camionnette = new Camionnette("789QDZAQD", 188.2, "usage");
+            Commande commande1 = new Commande(client, chauffeur, camionnette, "Rouen", distances) { Prix = 100 };
+            Commande commande2 = new Commande(client, chauffeur, camionnette, "Rouen", distances) { Prix = 200 };
 
             client.FinCommande(commande1);
             client.FinCommande(commande2);
@@ -71,14 +71,14 @@ namespace Projet_TransConnect_TANG
         #region Commande
         public void TestCreerCommande()
         {
-            var directeur = new Salarie("123", "Dupond", "Jean", new DateTime(1965, 4, 23), "Adresse", "email@example.com", "1234567890", "Directeur Général", EClassement.Directeur, EDepartment.Operation, 8000, 20);
-            var chauffeur = new Chauffeur("789", "Chauffeur", "Test", new DateTime(1985, 3, 25), "Adresse", "email@example.com", "1234567890", "Chauffeur", EClassement.Chauffeur, EDepartment.Operation, 3000, 5);
-            var entreprise = new Entreprise(directeur, new List<Salarie> { chauffeur }, distances);
-            var client = new Client("456", "Nom", "Prenom", new DateTime(1990, 1, 1), "Adresse", "email@example.com", "1234567890", "Paris");
+            Salarie directeur = new Salarie("123", "Dupond", "Jean", new DateTime(1965, 4, 23), "Adresse", "email@example.com", "1234567890", "Directeur Général", EClassement.Directeur, EDepartment.Operation, 8000, 20);
+            Chauffeur chauffeur = new Chauffeur("789", "Chauffeur", "Test", new DateTime(1985, 3, 25), "Adresse", "email@example.com", "1234567890", "Chauffeur", EClassement.Chauffeur, EDepartment.Operation, 3000, 5);
+            Entreprise entreprise = new Entreprise(directeur, new List<Salarie> { chauffeur }, distances);
+            Client client = new Client("456", "Nom", "Prenom", new DateTime(1990, 1, 1), "Adresse", "email@example.com", "1234567890", "Paris");
             entreprise.AjouterClient(client);
 
-            var vehicule = new Voiture("1234", 50, 4);
-            var commande = new Commande(client, chauffeur, vehicule, "La Rochelle", distances);
+            Voiture vehicule = new Voiture("1234", 50, 4);
+            Commande commande = new Commande(client, chauffeur, vehicule, "La Rochelle", distances);
             entreprise.AjouterCommandeEnCours(commande);
 
             if (entreprise.CommandesEnCours.Contains(commande))
@@ -129,13 +129,13 @@ namespace Projet_TransConnect_TANG
         public void TestChauffeurDisponible()
         {
             Client client = new Client("456", "ClientNom", "ClientPrenom", new DateTime(1990, 1, 1), "Adresse", "email@example.com", "1234567890", "Paris");
-            var vehicule = new Voiture("1234", 50, 4);
-            var directeur = new Salarie("123", "Dupond", "Jean", new DateTime(1965, 4, 23), "Adresse", "email@example.com", "1234567890", "Directeur Général", EClassement.Directeur, EDepartment.Operation, 8000, 20);
-            var chauffeur = new Chauffeur("789", "Chauffeur", "Test", new DateTime(1985, 3, 25), "Adresse", "email@example.com", "1234567890", "Chauffeur", EClassement.Chauffeur, EDepartment.Operation, 3000, 5);
-            var entreprise = new Entreprise(directeur, new List<Salarie> { chauffeur }, distances);
+            Voiture vehicule = new Voiture("1234", 50, 4);
+            Salarie directeur = new Salarie("123", "Dupond", "Jean", new DateTime(1965, 4, 23), "Adresse", "email@example.com", "1234567890", "Directeur Général", EClassement.Directeur, EDepartment.Operation, 8000, 20);
+            Chauffeur chauffeur = new Chauffeur("789", "Chauffeur", "Test", new DateTime(1985, 3, 25), "Adresse", "email@example.com", "1234567890", "Chauffeur", EClassement.Chauffeur, EDepartment.Operation, 3000, 5);
+            Entreprise entreprise = new Entreprise(directeur, new List<Salarie> { chauffeur }, distances);
             Commande commande = new Commande(client, chauffeur, vehicule, "La Rochelle", distances);
 
-            var disponible = entreprise.EnvoyerChauffeurDisponible();
+            Chauffeur disponible = entreprise.EnvoyerChauffeurDisponible();
             Console.WriteLine("Before :");
             Console.WriteLine(chauffeur.NbCommandesLivrees());
             chauffeur.FinCommande(commande);
@@ -157,9 +157,9 @@ namespace Projet_TransConnect_TANG
         #region Entreprise
         public void TestAjouterClient()
         {
-            var directeur = new Salarie("123", "Dupond", "Jean", new DateTime(1965, 4, 23), "Adresse", "email@example.com", "1234567890", "Directeur Général", EClassement.Directeur, EDepartment.Operation, 8000, 20);
-            var entreprise = new Entreprise(directeur, new List<Salarie> {}, distances);
-            var client = new Client("456", "Nom", "Prenom", new DateTime(1990, 1, 1), "Adresse", "email@example.com", "1234567890", "Ville");
+            Salarie directeur = new Salarie("123", "Dupond", "Jean", new DateTime(1965, 4, 23), "Adresse", "email@example.com", "1234567890", "Directeur Général", EClassement.Directeur, EDepartment.Operation, 8000, 20);
+            Entreprise entreprise = new Entreprise(directeur, new List<Salarie> {}, distances);
+            Client client = new Client("456", "Nom", "Prenom", new DateTime(1990, 1, 1), "Adresse", "email@example.com", "1234567890", "Ville");
 
             Console.WriteLine("Nombre de cliens Before :");
             Console.WriteLine(entreprise.Clients.Count);
