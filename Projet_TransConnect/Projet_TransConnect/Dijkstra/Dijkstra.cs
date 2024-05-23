@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace Projet_TransConnect_TANG
     public class Dijkstra
     {
         static int MAX = int.MaxValue;
-        String[] vexss;
+        String[] vexss; // Villes
         int mEdgNum;    // Nombre de bords
         VNode[] mVexs;  // Tableau de sommets
         int distance;
@@ -99,10 +100,9 @@ namespace Projet_TransConnect_TANG
             get { return timeTaken; }
         }
         public List<string> Chemin
-        { 
+        {
             get { return chemin; } 
         }
-
         /// <summary>
         /// Ajoute un nœud à la fin de la liste des bords.
         /// </summary>
@@ -194,7 +194,7 @@ namespace Projet_TransConnect_TANG
                     }
                 }
             }
-
+            
             this.distance = dist[Array.IndexOf(this.vexss, end)];
             this.timeTaken = time[Array.IndexOf(this.vexss, end)];
             this.chemin = ReconstructPath(vs, Array.IndexOf(this.vexss, end), prev);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using static Projet_TransConnect_TANG.Camion;
 
 namespace Projet_TransConnect_TANG
@@ -59,37 +60,37 @@ namespace Projet_TransConnect_TANG
             List<string[]> Distances = CSVHelper.ReadCSV(@"..\..\Distances.csv");
 
             // Directeur Général
-            Salairie Dupond = new Salairie("123456789", "Dupond", "Jean", new DateTime(1965, 4, 23), "Adresse Dupond", "dupond@company.com", "1234567890", "Directeur Général", EClassement.Directeur, EDepartment.Operation, 8000, 20);
+            Salarie Dupond = new Salarie("123456789", "Dupond", "Jean", new DateTime(1965, 4, 23), "Adresse Dupond", "dupond@company.com", "1234567890", "Directeur Général", EClassement.Directeur, EDepartment.Operation, 8000, 20);
 
-            List<Salairie> salairies = new List<Salairie>
+            List<Salarie> salairies = new List<Salarie>
             {
                 // Direction Commerciale
-                new Salairie("234567890", "Fiesta", "Marie", new DateTime(1970, 6, 15), "Adresse Fiesta", "fiesta@company.com", "2345678901", "Directrice Commerciale", EClassement.Directeur, EDepartment.Commerciale, 6000,1),
-                new Salairie("345678901", "Forge", "Pierre", new DateTime(1975, 8, 10), "Adresse Forge", "forge@company.com", "3456789012", "Commercial", EClassement.Commercial, EDepartment.Commerciale, 4000,2),
-                new Salairie("456789012", "Fermi", "Sophie", new DateTime(1980, 9, 5), "Adresse Fermi", "fermi@company.com", "4567890123", "Commerciale", EClassement.Commercial, EDepartment.Commerciale, 4000,3),
+                new Salarie("234567890", "Fiesta", "Marie", new DateTime(1970, 6, 15), "Adresse Fiesta", "fiesta@company.com", "2345678901", "Directrice Commerciale", EClassement.Directeur, EDepartment.Commerciale, 6000,1),
+                new Salarie("345678901", "Forge", "Pierre", new DateTime(1975, 8, 10), "Adresse Forge", "forge@company.com", "3456789012", "Commercial", EClassement.Commercial, EDepartment.Commerciale, 4000,2),
+                new Salarie("456789012", "Fermi", "Sophie", new DateTime(1980, 9, 5), "Adresse Fermi", "fermi@company.com", "4567890123", "Commerciale", EClassement.Commercial, EDepartment.Commerciale, 4000,3),
 
                 // Direction des Opérations
-                new Salairie("567890123", "Fetard", "Louis", new DateTime(1968, 11, 20), "Adresse Fetard", "fetard@company.com", "5678901234", "Directeur des opérations", EClassement.Directeur, EDepartment.Operation, 7000,4),
-                new Salairie("678901234", "Royal", "Claude", new DateTime(1972, 1, 30), "Adresse Royal", "royal@company.com", "6789012345", "Chef Equipe", EClassement.ChefEquipe, EDepartment.Operation, 5000,4),
+                new Salarie("567890123", "Fetard", "Louis", new DateTime(1968, 11, 20), "Adresse Fetard", "fetard@company.com", "5678901234", "Directeur des opérations", EClassement.Directeur, EDepartment.Operation, 7000,4),
+                new Salarie("678901234", "Royal", "Claude", new DateTime(1972, 1, 30), "Adresse Royal", "royal@company.com", "6789012345", "Chef Equipe", EClassement.ChefEquipe, EDepartment.Operation, 5000,4),
                 new Chauffeur("789012345", "Romu", "Jacques", new DateTime(1985, 3, 25), "Adresse Romu", "romu@company.com", "7890123456", "Chauffeur", EClassement.Chauffeur, EDepartment.Operation, 3000, 5),
                 new Chauffeur("890123456", "Romi", "Pascal", new DateTime(1988, 4, 12), "Adresse Romi", "romi@company.com", "7890123456", "Chauffeur", EClassement.Chauffeur, EDepartment.Operation, 3000, 4),
                 new Chauffeur("901234567", "Roma", "Thierry", new DateTime(1990, 5, 18), "Adresse Roma", "roma@company.com", "9012345678", "Chauffeur", EClassement.Chauffeur, EDepartment.Operation, 3000, 3),
 
-                new Salairie("112345678", "Prince", "Claire", new DateTime(1973, 2, 22), "Adresse Prince", "prince@company.com", "1123456789", "Chef d'Equipe", EClassement.ChefEquipe, EDepartment.Operation, 5000,5),
+                new Salarie("112345678", "Prince", "Claire", new DateTime(1973, 2, 22), "Adresse Prince", "prince@company.com", "1123456789", "Chef d'Equipe", EClassement.ChefEquipe, EDepartment.Operation, 5000,5),
                 new Chauffeur("223456789", "Rome", "Isabelle", new DateTime(1986, 7, 15), "Adresse Rome", "rome@company.com", "2234567890", "Chauffeur", EClassement.Chauffeur, EDepartment.Operation, 3000, 6),
                 new Chauffeur("334567890", "Rimou", "Aline", new DateTime(1989, 8, 21), "Adresse Rimou", "rimou@company.com", "3345678901", "Chauffeur", EClassement.Chauffeur, EDepartment.Operation, 3000, 4),
 
                 // Direction des Ressources Humaines
-                new Salairie("445678901", "Joyeuse", "Lucie", new DateTime(1978, 10, 2), "Adresse Joyeuse", "joyeuse@company.com", "4456789012", "Directrice des RH", EClassement.Directeur, EDepartment.RH, 6000,6),
-                new Salairie("556789012", "Couleur", "Nathalie", new DateTime(1982, 11, 9), "Adresse Couleur", "couleur@company.com", "5567890123", "Formation", EClassement.Formation, EDepartment.RH, 4000,5),
-                new Salairie("667890123", "TouteleMonde", "Caroline", new DateTime(1985, 12, 12), "Adresse TouteleMonde", "toutelemonde@company.com", "6678901234", "Contrats", EClassement.Contrats, EDepartment.RH, 4000,4),
+                new Salarie("445678901", "Joyeuse", "Lucie", new DateTime(1978, 10, 2), "Adresse Joyeuse", "joyeuse@company.com", "4456789012", "Directrice des RH", EClassement.Directeur, EDepartment.RH, 6000,6),
+                new Salarie("556789012", "Couleur", "Nathalie", new DateTime(1982, 11, 9), "Adresse Couleur", "couleur@company.com", "5567890123", "Formation", EClassement.Formation, EDepartment.RH, 4000,5),
+                new Salarie("667890123", "TouteleMonde", "Caroline", new DateTime(1985, 12, 12), "Adresse TouteleMonde", "toutelemonde@company.com", "6678901234", "Contrats", EClassement.Contrats, EDepartment.RH, 4000,4),
 
                 // Direction Financière
-                new Salairie("778901234", "GripSous", "Bernard", new DateTime(1967, 5, 4), "Adresse GripSous", "gripsous@company.com", "7789012345", "Directeur Financier", EClassement.Directeur, EDepartment.Financier, 7000,3),
-                new Salairie("889012345", "Picsou", "Julien", new DateTime(1974, 3, 7), "Adresse Picsou", "picsou@company.com", "8890123456", "Direction comptable", EClassement.ChefEquipe, EDepartment.Financier, 5000,2),
-                new Salairie("990123456", "Fournier", "Antoine", new DateTime(1981, 6, 16), "Adresse Fournier", "fournier@company.com", "9901234567", "Comptable", EClassement.Comptable, EDepartment.Financier, 4000,3),
-                new Salairie("1012345678", "Gautier", "Marc", new DateTime(1983, 7, 22), "Adresse Gautier", "gautier@company.com", "10123456789", "Comptable", EClassement.Comptable, EDepartment.Financier, 4000,4),
-                new Salairie("1123456789", "GrosSous", "Paul", new DateTime(1979, 4, 11), "Adresse GrosSous", "grossous@company.com", "11234567890", "Contrôleur de Gestion", EClassement.ChefEquipe, EDepartment.Financier, 4500,5)
+                new Salarie("778901234", "GripSous", "Bernard", new DateTime(1967, 5, 4), "Adresse GripSous", "gripsous@company.com", "7789012345", "Directeur Financier", EClassement.Directeur, EDepartment.Financier, 7000,3),
+                new Salarie("889012345", "Picsou", "Julien", new DateTime(1974, 3, 7), "Adresse Picsou", "picsou@company.com", "8890123456", "Direction comptable", EClassement.ChefEquipe, EDepartment.Financier, 5000,2),
+                new Salarie("990123456", "Fournier", "Antoine", new DateTime(1981, 6, 16), "Adresse Fournier", "fournier@company.com", "9901234567", "Comptable", EClassement.Comptable, EDepartment.Financier, 4000,3),
+                new Salarie("1012345678", "Gautier", "Marc", new DateTime(1983, 7, 22), "Adresse Gautier", "gautier@company.com", "10123456789", "Comptable", EClassement.Comptable, EDepartment.Financier, 4000,4),
+                new Salarie("1123456789", "GrosSous", "Paul", new DateTime(1979, 4, 11), "Adresse GrosSous", "grossous@company.com", "11234567890", "Contrôleur de Gestion", EClassement.ChefEquipe, EDepartment.Financier, 4500,5)
             };
 
             // Création de l'entreprise TransConnect
@@ -391,6 +392,7 @@ namespace Projet_TransConnect_TANG
                 Console.WriteLine("2. Supprimer un Salarié");
                 Console.WriteLine("3. Modifier un Salarié");
                 Console.WriteLine("4. Afficher l'Organigramme");
+                Console.WriteLine("5. Afficher les chauffeur disponible");
                 Console.WriteLine("0. Retour au Menu Principal");
                 Console.Write("Choisissez une option : ");
                 var choix = Console.ReadLine();
@@ -407,6 +409,9 @@ namespace Projet_TransConnect_TANG
                         break;
                     case "4":
                         AfficherOrganigramme();
+                        break;
+                    case "5":
+                        AfficherChauffeurDispo();
                         break;
                     case "0":
                         return;
@@ -436,8 +441,8 @@ namespace Projet_TransConnect_TANG
             string email = Console.ReadLine();
             Console.Write("Entrez le téléphone : ");
             string telephone = Console.ReadLine();
-            Console.Write("Entrez la date d'entrée dans la société (yyyy-mm-dd) : ");
-            DateTime dateEntree = DateTime.Parse(Console.ReadLine());
+            Console.Write("Entrez l'ancienneté au travail : ");
+            int anciennete = Convert.ToInt32(Console.ReadLine());
             Console.Write("Entrez le poste : ");
             string poste = Console.ReadLine();
             Console.Write("Entrez le salaire : ");
@@ -449,7 +454,7 @@ namespace Projet_TransConnect_TANG
             Console.Write("Entrez le N°SS du salarié qui sera le parrain : ");
             string nssParrain = Console.ReadLine();
 
-            Salairie salarie = new Salairie(nss, nom, prenom, dateNaissance, adresse, email, telephone, poste, classement, department, salaire, (DateTime.Now.Year - dateEntree.Year));
+            Salarie salarie = new Salarie(nss, nom, prenom, dateNaissance, adresse, email, telephone, poste, classement, department, salaire, anciennete);
             TransConnect.Integrer(salarie, TransConnect.ChercherSalairie(nssParrain));
             Console.WriteLine("Salarié ajouté avec succès !");
             Console.ReadLine();
@@ -482,38 +487,52 @@ namespace Projet_TransConnect_TANG
         {
             Console.Write("Entrez le N°SS du salarié à modifier : ");
             string nss = Console.ReadLine();
-            var salarie = TransConnect.ChercherSalairie(nss);
+            if (!string.IsNullOrEmpty(nss))
+            { 
+            Salarie salarie = TransConnect.ChercherSalairie(nss);
             if (salarie != null)
             {
-                Console.Write("Entrez le nouveau nom (laisser vide pour ne pas changer) : ");
-                string nom = Console.ReadLine();
-                if (!string.IsNullOrEmpty(nom)) salarie.Nom = nom;
+                    Console.Write("Entrez le nouveau nom (laisser vide pour ne pas changer) : ");
+                    string nom = Console.ReadLine();
+                    if (!string.IsNullOrEmpty(nom)) salarie.Nom = nom;
 
-                Console.Write("Entrez le nouveau prénom (laisser vide pour ne pas changer) : ");
-                string prenom = Console.ReadLine();
-                if (!string.IsNullOrEmpty(prenom)) salarie.Prenom = prenom;
+                    Console.Write("Entrez le nouveau prénom (laisser vide pour ne pas changer) : ");
+                    string prenom = Console.ReadLine();
+                    if (!string.IsNullOrEmpty(prenom)) salarie.Prenom = prenom;
 
-                Console.Write("Entrez la nouvelle adresse (laisser vide pour ne pas changer) : ");
-                string adresse = Console.ReadLine();
-                if (!string.IsNullOrEmpty(adresse)) salarie.AdressePostale = adresse;
+                    Console.Write("Entrez la nouvelle adresse (laisser vide pour ne pas changer) : ");
+                    string adresse = Console.ReadLine();
+                    if (!string.IsNullOrEmpty(adresse)) salarie.AdressePostale = adresse;
 
-                Console.Write("Entrez le nouvel email (laisser vide pour ne pas changer) : ");
-                string email = Console.ReadLine();
-                if (!string.IsNullOrEmpty(email)) salarie.AdresseEmail = email;
+                    Console.Write("Entrez le nouvel email (laisser vide pour ne pas changer) : ");
+                    string email = Console.ReadLine();
+                    if (!string.IsNullOrEmpty(email)) salarie.AdresseEmail = email;
 
-                Console.Write("Entrez le nouveau téléphone (laisser vide pour ne pas changer) : ");
-                string telephone = Console.ReadLine();
-                if (!string.IsNullOrEmpty(telephone)) salarie.Telephone = telephone;
+                    Console.Write("Entrez le nouveau téléphone (laisser vide pour ne pas changer) : ");
+                    string telephone = Console.ReadLine();
+                    if (!string.IsNullOrEmpty(telephone)) salarie.Telephone = telephone;
 
-                Console.Write("Entrez le nouveau poste (laisser vide pour ne pas changer) : ");
-                string poste = Console.ReadLine();
-                if (!string.IsNullOrEmpty(poste)) salarie.Poste = poste;
+                    Console.Write("Entrez le nouveau poste (laisser vide pour ne pas changer) : ");
+                    string poste = Console.ReadLine();
 
-                Console.Write("Entrez le nouveau salaire (laisser vide pour ne pas changer) : ");
-                string salaire = Console.ReadLine();
-                if (!string.IsNullOrEmpty(salaire)) salarie.Salaire = Convert.ToInt32(salaire);
+                    if (!string.IsNullOrEmpty(poste))
+                    {
+                        Console.Write("Entrez le NSS de salarié supérieur : ");
+                        string NSSSupSalarie = Console.ReadLine();
+                        Salarie SalarieSup = TransConnect.ChercherSalairie(NSSSupSalarie);
+                        TransConnect.ChangementPostSalairie(poste, salarie, SalarieSup);
+                    }
 
-                Console.WriteLine("Salarié modifié avec succès !");
+                    Console.Write("Entrez le nouveau salaire (laisser vide pour ne pas changer) : ");
+                    string salaire = Console.ReadLine();
+                    if (!string.IsNullOrEmpty(salaire)) salarie.Salaire = Convert.ToInt32(salaire);
+
+                    Console.WriteLine("Salarié modifié avec succès !");
+                }
+                else
+                {
+                    Console.WriteLine("Salarié non trouvé !");
+                }
             }
             else
             {
@@ -528,6 +547,17 @@ namespace Projet_TransConnect_TANG
         static void AfficherOrganigramme()
         {
             TransConnect.AfficherOrganigramme();
+            Console.ReadLine();
+        }
+        /// <summary>
+        /// Affiche l'organigramme de l'entreprise.
+        /// </summary>
+        static void AfficherChauffeurDispo()
+        {
+            foreach (Chauffeur chauffeur in TransConnect.ChauffeursDiponible)
+            {
+                Console.WriteLine(chauffeur.ToString());
+            }
             Console.ReadLine();
         }
         #endregion
@@ -577,75 +607,85 @@ namespace Projet_TransConnect_TANG
         /// </summary>
         static void CreerCommande()
         {
+            List<string[]> Distances = CSVHelper.ReadCSV(@"..\..\Distances.csv");
             Console.Write("Entrez le N°SS du client : ");
             string nssClient = Console.ReadLine();
             var client = TransConnect.Clients.FirstOrDefault(c => c.NumeroSecuriteSociale == nssClient);
             if (client != null)
             {
+                String[] Starts = Distances[0];
+                String[] Ends = Distances[1];
+                String[] Villes = ConvertHelper.Villes(Starts, Ends);
                 Console.Write("Entrez la destination : ");
                 string destination = Console.ReadLine();
-
-                // Demander le type de véhicule
-                Console.WriteLine("Sélectionnez le type de véhicule : ");
-                Console.WriteLine("1. Voiture");
-                Console.WriteLine("2. Camionnette");
-                Console.WriteLine("3. Camion");
-                int choixVehicule = int.Parse(Console.ReadLine());
-
-                Vehicule vehicule;
-                Console.Write("Entrez l'immatriculation : ");
-                string immat = Console.ReadLine();
-                Console.Write("Entrez le prix de location : ");
-                double prixLoue = double.Parse(Console.ReadLine());
-
-                switch (choixVehicule)
+                if (Villes.Contains(destination) != false)
                 {
-                    case 1:
-                        Console.Write("Entrez le nombre de places : ");
-                        int nbPlaces = int.Parse(Console.ReadLine());
-                        vehicule = new Voiture(immat, prixLoue, nbPlaces);
-                        break;
-                    case 2:
-                        Console.Write("Entrez l'usage : ");
-                        string usage = Console.ReadLine();
-                        vehicule = new Camionnette(immat, prixLoue, usage);
-                        break;
-                    case 3:
-                        Console.WriteLine("Sélectionnez le type de camion : ");
-                        Console.WriteLine("1. Citerne");
-                        Console.WriteLine("2. Benne");
-                        Console.WriteLine("3. Frigorifique");
-                        int choixTypeCamion = int.Parse(Console.ReadLine());
-                        TypeCamion typeCamion;
-                        switch (choixTypeCamion)
-                        {
-                            case 1:
-                                typeCamion = TypeCamion.citerne;
-                                break;
-                            case 2:
-                                typeCamion = TypeCamion.benne;
-                                break;
-                            case 3:
-                                typeCamion = TypeCamion.frigorifique;
-                                break;
-                            default:
-                                Console.WriteLine("Choix de type de camion invalide !");
-                                return;
-                        }
-                        vehicule = new Camion(immat, prixLoue, typeCamion);
-                        break;
-                    default:
-                        Console.WriteLine("Choix de véhicule invalide !");
-                        return;
+                    // Demander le type de véhicule
+                    Console.WriteLine("Sélectionnez le type de véhicule : ");
+                    Console.WriteLine("1. Voiture");
+                    Console.WriteLine("2. Camionnette");
+                    Console.WriteLine("3. Camion");
+                    int choixVehicule = int.Parse(Console.ReadLine());
+
+                    Vehicule vehicule;
+                    Console.Write("Entrez l'immatriculation : ");
+                    string immat = Console.ReadLine();
+                    Console.Write("Entrez le prix de location : ");
+                    double prixLoue = double.Parse(Console.ReadLine());
+
+                    switch (choixVehicule)
+                    {
+                        case 1:
+                            Console.Write("Entrez le nombre de places : ");
+                            int nbPlaces = int.Parse(Console.ReadLine());
+                            vehicule = new Voiture(immat, prixLoue, nbPlaces);
+                            break;
+                        case 2:
+                            Console.Write("Entrez l'usage : ");
+                            string usage = Console.ReadLine();
+                            vehicule = new Camionnette(immat, prixLoue, usage);
+                            break;
+                        case 3:
+                            Console.WriteLine("Sélectionnez le type de camion : ");
+                            Console.WriteLine("1. Citerne");
+                            Console.WriteLine("2. Benne");
+                            Console.WriteLine("3. Frigorifique");
+                            int choixTypeCamion = int.Parse(Console.ReadLine());
+                            TypeCamion typeCamion;
+                            switch (choixTypeCamion)
+                            {
+                                case 1:
+                                    typeCamion = TypeCamion.citerne;
+                                    break;
+                                case 2:
+                                    typeCamion = TypeCamion.benne;
+                                    break;
+                                case 3:
+                                    typeCamion = TypeCamion.frigorifique;
+                                    break;
+                                default:
+                                    Console.WriteLine("Choix de type de camion invalide !");
+                                    return;
+                            }
+                            vehicule = new Camion(immat, prixLoue, typeCamion);
+                            break;
+                        default:
+                            Console.WriteLine("Choix de véhicule invalide !");
+                            return;
+                    }
+
+                    Chauffeur chauffeur = TransConnect.EnvoyerChauffeurDisponible();
+                    Distances = TransConnect.Distances;
+
+                    Commande commande = new Commande(client, chauffeur, vehicule, destination, Distances);
+                    TransConnect.AjouterCommandeEnCours(commande);
+
+                    Console.WriteLine("Commande créée avec succès !");
                 }
-
-                Chauffeur chauffeur = TransConnect.ChauffeurDisponible();
-                List<string[]> Distances = TransConnect.Distances;
-
-                Commande commande = new Commande(client, chauffeur, vehicule, destination, Distances);
-                TransConnect.AjouterCommandeEnCours(commande);
-
-                Console.WriteLine("Commande créée avec succès !");
+                else
+                {
+                    Console.WriteLine("Client non trouvé !");
+                }
             }
             else
             {
@@ -675,11 +715,20 @@ namespace Projet_TransConnect_TANG
         {
             AfficherCommandesEnCours();
             Console.Write("Entrez le numéro de la commande à marquer comme finie : ");
-            int index = Convert.ToInt32(Console.ReadLine()) - 1;
-            if (index >= 0 && index < TransConnect.CommandesEnCours.Count)
+            string Index = Console.ReadLine();
+            
+            if (Index != "")
             {
-                TransConnect.FinCommande(index);
-                Console.WriteLine("Commande marquée comme finie avec succès !");
+                int index = Convert.ToInt32(Index) - 1;
+                if (index >= 0 && index < TransConnect.CommandesEnCours.Count)
+                {
+                    TransConnect.FinCommande(index);
+                    Console.WriteLine("Commande marquée comme finie avec succès !");
+                }
+                else
+                {
+                    Console.WriteLine("Numéro de commande invalide !");
+                }
             }
             else
             {
@@ -789,8 +838,8 @@ namespace Projet_TransConnect_TANG
         /// </summary>
         static void AfficherMoyennePrixCommandes()
         {
-            var moyennePrix = TransConnect.CommandesFinies.Average(c => c.Prix);
-            Console.WriteLine($"La moyenne des prix des commandes est de : {moyennePrix} euros");
+            double moyennePrix = TransConnect.Moyenne();
+            Console.WriteLine($"La moyenne des prix des commandes est de : {moyennePrix.ToString()} euros");
             Console.ReadLine();
         }
 
@@ -799,12 +848,10 @@ namespace Projet_TransConnect_TANG
         /// </summary>
         static void AfficherMoyenneComptesClients()
         {
-            foreach (var client in TransConnect.Clients)
+            foreach (Client client in TransConnect.Clients)
             {
-                client.Accumuler();
+                Console.WriteLine(client.ToString() + $"- prix moyen des commandes : {client.Moyenne().ToString()} euros");
             }
-            var moyenneMontant = TransConnect.Clients.Average(c => c.MontantAccumule);
-            Console.WriteLine($"La moyenne des montants des comptes clients est de : {moyenneMontant} euros");
             Console.ReadLine();
         }
 

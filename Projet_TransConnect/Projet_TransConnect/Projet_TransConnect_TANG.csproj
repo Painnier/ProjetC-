@@ -52,27 +52,27 @@
     <None Include="Distances.csv" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chauffeur.cs" />
+    <Compile Include="Entreprise\Chauffeur.cs" />
     <Compile Include="Dijkstra\Dijkstra.cs" />
     <Compile Include="Dijkstra\EData.cs" />
     <Compile Include="Dijkstra\ENode.cs" />
     <Compile Include="Dijkstra\VNode.cs" />
-    <Compile Include="Interfaces\IMoyenne.cs" />
-    <Compile Include="Helpers\ConvertHelper.cs" />
-    <Compile Include="Helpers\CSVHelper.cs" />
-    <Compile Include="Multitree.cs" />
+    <Compile Include="Commun\Interfaces\IMoyenne.cs" />
+    <Compile Include="Commun\Helpers\ConvertHelper.cs" />
+    <Compile Include="Commun\Helpers\CSVHelper.cs" />
+    <Compile Include="Commun\Multitree.cs" />
     <Compile Include="Programme.cs" />
     <Compile Include="TestUnitaire.cs" />
-    <Compile Include="Véhicule\Camionnette.cs" />
-    <Compile Include="Client.cs" />
-    <Compile Include="Commande.cs" />
-    <Compile Include="Entreprise.cs" />
-    <Compile Include="MTreeNode.cs" />
-    <Compile Include="Personne.cs" />
-    <Compile Include="Véhicule\Camion.cs" />
-    <Compile Include="Salairie.cs" />
-    <Compile Include="Véhicule\Vehicule.cs" />
-    <Compile Include="Véhicule\Voiture.cs" />
+    <Compile Include="Entreprise\Véhicule\Camionnette.cs" />
+    <Compile Include="Client\Client.cs" />
+    <Compile Include="Client\Commande.cs" />
+    <Compile Include="Entreprise\Entreprise.cs" />
+    <Compile Include="Commun\MTreeNode.cs" />
+    <Compile Include="Commun\Personne.cs" />
+    <Compile Include="Entreprise\Véhicule\Camion.cs" />
+    <Compile Include="Entreprise\Salarie.cs" />
+    <Compile Include="Entreprise\Véhicule\Vehicule.cs" />
+    <Compile Include="Entreprise\Véhicule\Voiture.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
